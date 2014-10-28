@@ -1,0 +1,46 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 9.500 ns
+From           : counter1:inst1|inst
+To             : Q1
+From Clock     : CLOCK
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CLOCK'
+Slack          : 91.200 ns
+Required Time  : 10.00 MHz ( period = 100.000 ns )
+Actual Time    : 113.64 MHz ( period = 8.800 ns )
+From           : debounce:inst|count_reg[3]
+To             : debounce:inst|count_reg[4]
+From Clock     : CLOCK
+To Clock       : CLOCK
+Failed Paths   : 0
+
+Type           : Clock Hold: 'CLOCK'
+Slack          : 3.000 ns
+Required Time  : 10.00 MHz ( period = 100.000 ns )
+Actual Time    : N/A
+From           : counter1:inst1|inst1
+To             : counter1:inst1|inst1
+From Clock     : CLOCK
+To Clock       : CLOCK
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

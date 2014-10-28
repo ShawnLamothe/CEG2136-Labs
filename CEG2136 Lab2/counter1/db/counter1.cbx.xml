@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="counter1">
+		<CBX_INST_ENTRY INSTANCE_NAME="|test2|debounce:inst|lpm_add_sub:op_1" CBX_FILE_NAME="add_sub_8kh.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

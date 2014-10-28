@@ -1,0 +1,237 @@
+Simulator report for Lab3
+Thu Oct 23 14:26:52 2014
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------+
+; Simulator Summary                            ;
++-----------------------------+----------------+
+; Type                        ; Value          ;
++-----------------------------+----------------+
+; Simulation Start Time       ; 0 ps           ;
+; Simulation End Time         ; 1.0 us         ;
+; Simulation Netlist Size     ; 60 nodes       ;
+; Simulation Coverage         ;      71.67 %   ;
+; Total Number of Transitions ; 299            ;
+; Simulation Breakpoints      ; 0              ;
+; Family                      ; MAX7000S       ;
+; Device                      ; EPM7064SLC84-7 ;
++-----------------------------+----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                 ;
++--------------------------------------------------------------------------------------------+-----------------------+---------------+
+; Option                                                                                     ; Setting               ; Default Value ;
++--------------------------------------------------------------------------------------------+-----------------------+---------------+
+; Simulation mode                                                                            ; Timing                ; Timing        ;
+; Start time                                                                                 ; 0 ns                  ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF                  ;               ;
+; Vector input source                                                                        ; arithcircuit4bits.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                    ; On            ;
+; Check outputs                                                                              ; Off                   ; Off           ;
+; Report simulation coverage                                                                 ; On                    ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                    ; On            ;
+; Display missing 1-value coverage report                                                    ; On                    ; On            ;
+; Display missing 0-value coverage report                                                    ; On                    ; On            ;
+; Detect setup and hold time violations                                                      ; Off                   ; Off           ;
+; Detect glitches                                                                            ; Off                   ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                   ; Off           ;
+; Generate Signal Activity File                                                              ; Off                   ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                   ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                   ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                    ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE            ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                   ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                   ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                  ; Auto          ;
++--------------------------------------------------------------------------------------------+-----------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      71.67 % ;
+; Total nodes checked                                 ; 60           ;
+; Total output ports checked                          ; 60           ;
+; Total output ports with complete 1/0-value coverage ; 43           ;
+; Total output ports with no 1/0-value coverage       ; 15           ;
+; Total output ports with no 1-value coverage         ; 17           ;
+; Total output ports with no 0-value coverage         ; 15           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                  ;
++-----------------------------------------------------+-----------------------------------------------------+------------------+
+; Node Name                                           ; Output Port Name                                    ; Output Port Type ;
++-----------------------------------------------------+-----------------------------------------------------+------------------+
+; |arithcircuit4bits|fulladder1bit:inst6|inst1~0      ; |arithcircuit4bits|fulladder1bit:inst6|inst1~0      ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst|inst1~2       ; |arithcircuit4bits|fulladder1bit:inst|inst1~2       ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst|inst1~3       ; |arithcircuit4bits|fulladder1bit:inst|inst1~3       ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst|inst1~4       ; |arithcircuit4bits|fulladder1bit:inst|inst1~4       ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst|inst1~6       ; |arithcircuit4bits|fulladder1bit:inst|inst1~6       ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst4|inst1~0      ; |arithcircuit4bits|fulladder1bit:inst4|inst1~0      ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst4|inst1~1      ; |arithcircuit4bits|fulladder1bit:inst4|inst1~1      ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst4|inst1~4      ; |arithcircuit4bits|fulladder1bit:inst4|inst1~4      ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst4|inst1~6      ; |arithcircuit4bits|fulladder1bit:inst4|inst1~6      ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst4|inst1~8      ; |arithcircuit4bits|fulladder1bit:inst4|inst1~8      ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst4|inst1~9      ; |arithcircuit4bits|fulladder1bit:inst4|inst1~9      ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst4|inst1~11     ; |arithcircuit4bits|fulladder1bit:inst4|inst1~11     ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst5|inst1~36     ; |arithcircuit4bits|fulladder1bit:inst5|inst1~36     ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst|inst4~5       ; |arithcircuit4bits|fulladder1bit:inst|inst4~5       ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst4|inst~5       ; |arithcircuit4bits|fulladder1bit:inst4|inst~5       ; dataout          ;
+; |arithcircuit4bits|74153:inst23|10~4                ; |arithcircuit4bits|74153:inst23|10~4                ; dataout          ;
+; |arithcircuit4bits|74153:inst23|9~1                 ; |arithcircuit4bits|74153:inst23|9~1                 ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst5|inst4~5      ; |arithcircuit4bits|fulladder1bit:inst5|inst4~5      ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst6|inst1~7      ; |arithcircuit4bits|fulladder1bit:inst6|inst1~7      ; pexpout          ;
+; |arithcircuit4bits|fulladder1bit:inst|inst1~13      ; |arithcircuit4bits|fulladder1bit:inst|inst1~13      ; pexpout          ;
+; |arithcircuit4bits|fulladder1bit:inst4|inst1~18     ; |arithcircuit4bits|fulladder1bit:inst4|inst1~18     ; pexpout          ;
+; |arithcircuit4bits|fulladder1bit:inst|inst4~6       ; |arithcircuit4bits|fulladder1bit:inst|inst4~6       ; pexpout          ;
+; |arithcircuit4bits|fulladder1bit:inst|inst4~12      ; |arithcircuit4bits|fulladder1bit:inst|inst4~12      ; pexpout          ;
+; |arithcircuit4bits|fulladder1bit:inst4|inst~6       ; |arithcircuit4bits|fulladder1bit:inst4|inst~6       ; pexpout          ;
+; |arithcircuit4bits|fulladder1bit:inst5|inst4~6      ; |arithcircuit4bits|fulladder1bit:inst5|inst4~6      ; pexpout          ;
+; |arithcircuit4bits|fulladder1bit:inst5|inst4~9      ; |arithcircuit4bits|fulladder1bit:inst5|inst4~9      ; pexpout          ;
+; |arithcircuit4bits|fulladder1bit:inst5|inst1~5sexp1 ; |arithcircuit4bits|fulladder1bit:inst5|inst1~5sexp1 ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst5|inst1~30bal  ; |arithcircuit4bits|fulladder1bit:inst5|inst1~30bal  ; dataout          ;
+; |arithcircuit4bits|A3                               ; |arithcircuit4bits|A3~corein                        ; dataout          ;
+; |arithcircuit4bits|S1                               ; |arithcircuit4bits|S1~corein                        ; dataout          ;
+; |arithcircuit4bits|S2                               ; |arithcircuit4bits|S2~corein                        ; dataout          ;
+; |arithcircuit4bits|A2                               ; |arithcircuit4bits|A2~corein                        ; dataout          ;
+; |arithcircuit4bits|B2                               ; |arithcircuit4bits|B2~corein                        ; dataout          ;
+; |arithcircuit4bits|A1                               ; |arithcircuit4bits|A1~corein                        ; dataout          ;
+; |arithcircuit4bits|B1                               ; |arithcircuit4bits|B1~corein                        ; dataout          ;
+; |arithcircuit4bits|A0                               ; |arithcircuit4bits|A0~corein                        ; dataout          ;
+; |arithcircuit4bits|B0                               ; |arithcircuit4bits|B0~corein                        ; dataout          ;
+; |arithcircuit4bits|S0                               ; |arithcircuit4bits|S0~corein                        ; dataout          ;
+; |arithcircuit4bits|C0                               ; |arithcircuit4bits|C0                               ; padio            ;
+; |arithcircuit4bits|C1                               ; |arithcircuit4bits|C1                               ; padio            ;
+; |arithcircuit4bits|C2                               ; |arithcircuit4bits|C2                               ; padio            ;
+; |arithcircuit4bits|C3                               ; |arithcircuit4bits|C3                               ; padio            ;
+; |arithcircuit4bits|Carry_out                        ; |arithcircuit4bits|Carry_out                        ; padio            ;
++-----------------------------------------------------+-----------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                     ;
++-----------------------------------------------------+-----------------------------------------------------+------------------+
+; Node Name                                           ; Output Port Name                                    ; Output Port Type ;
++-----------------------------------------------------+-----------------------------------------------------+------------------+
+; |arithcircuit4bits|fulladder1bit:inst|inst1~0       ; |arithcircuit4bits|fulladder1bit:inst|inst1~0       ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst|inst1~1       ; |arithcircuit4bits|fulladder1bit:inst|inst1~1       ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst|inst1~5       ; |arithcircuit4bits|fulladder1bit:inst|inst1~5       ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst4|inst1~5      ; |arithcircuit4bits|fulladder1bit:inst4|inst1~5      ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst4|inst1~7      ; |arithcircuit4bits|fulladder1bit:inst4|inst1~7      ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst4|inst1~10     ; |arithcircuit4bits|fulladder1bit:inst4|inst1~10     ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst5|inst1~11     ; |arithcircuit4bits|fulladder1bit:inst5|inst1~11     ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst5|inst1~17     ; |arithcircuit4bits|fulladder1bit:inst5|inst1~17     ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst5|inst1~23     ; |arithcircuit4bits|fulladder1bit:inst5|inst1~23     ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst5|inst1~29     ; |arithcircuit4bits|fulladder1bit:inst5|inst1~29     ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst5|inst1~43     ; |arithcircuit4bits|fulladder1bit:inst5|inst1~43     ; pexpout          ;
+; |arithcircuit4bits|fulladder1bit:inst5|inst1~5sexp2 ; |arithcircuit4bits|fulladder1bit:inst5|inst1~5sexp2 ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst5|inst1~5sexp3 ; |arithcircuit4bits|fulladder1bit:inst5|inst1~5sexp3 ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst5|inst1~5sexp4 ; |arithcircuit4bits|fulladder1bit:inst5|inst1~5sexp4 ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst5|inst1~5sexp5 ; |arithcircuit4bits|fulladder1bit:inst5|inst1~5sexp5 ; dataout          ;
+; |arithcircuit4bits|B3                               ; |arithcircuit4bits|B3~corein                        ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst4|inst1~24     ; |arithcircuit4bits|fulladder1bit:inst4|inst1~24     ; dataout          ;
++-----------------------------------------------------+-----------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                     ;
++-----------------------------------------------------+-----------------------------------------------------+------------------+
+; Node Name                                           ; Output Port Name                                    ; Output Port Type ;
++-----------------------------------------------------+-----------------------------------------------------+------------------+
+; |arithcircuit4bits|fulladder1bit:inst|inst1~0       ; |arithcircuit4bits|fulladder1bit:inst|inst1~0       ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst|inst1~5       ; |arithcircuit4bits|fulladder1bit:inst|inst1~5       ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst4|inst1~5      ; |arithcircuit4bits|fulladder1bit:inst4|inst1~5      ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst4|inst1~7      ; |arithcircuit4bits|fulladder1bit:inst4|inst1~7      ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst4|inst1~10     ; |arithcircuit4bits|fulladder1bit:inst4|inst1~10     ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst5|inst1~11     ; |arithcircuit4bits|fulladder1bit:inst5|inst1~11     ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst5|inst1~23     ; |arithcircuit4bits|fulladder1bit:inst5|inst1~23     ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst5|inst1~29     ; |arithcircuit4bits|fulladder1bit:inst5|inst1~29     ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst5|inst1~43     ; |arithcircuit4bits|fulladder1bit:inst5|inst1~43     ; pexpout          ;
+; |arithcircuit4bits|fulladder1bit:inst5|inst1~5sexp2 ; |arithcircuit4bits|fulladder1bit:inst5|inst1~5sexp2 ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst5|inst1~5sexp3 ; |arithcircuit4bits|fulladder1bit:inst5|inst1~5sexp3 ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst5|inst1~5sexp4 ; |arithcircuit4bits|fulladder1bit:inst5|inst1~5sexp4 ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst5|inst1~5sexp5 ; |arithcircuit4bits|fulladder1bit:inst5|inst1~5sexp5 ; dataout          ;
+; |arithcircuit4bits|B3                               ; |arithcircuit4bits|B3~corein                        ; dataout          ;
+; |arithcircuit4bits|fulladder1bit:inst4|inst1~24     ; |arithcircuit4bits|fulladder1bit:inst4|inst1~24     ; dataout          ;
++-----------------------------------------------------+-----------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Thu Oct 23 14:26:51 2014
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Lab3 -c Lab3
+Info: Using vector source file "E:/CEG2136 Lab3/arithcircuit4bits.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      71.67 %
+Info: Number of transitions in simulation is 299
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 142 megabytes
+    Info: Processing ended: Thu Oct 23 14:26:52 2014
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

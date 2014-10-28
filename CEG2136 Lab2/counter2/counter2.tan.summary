@@ -1,0 +1,36 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 9.500 ns
+From           : JK0
+To             : Q0
+From Clock     : CCLK
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CCLK'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 113.64 MHz ( period = 8.800 ns )
+From           : debounce:inst|count_reg[3]
+To             : debounce:inst|count_reg[4]
+From Clock     : CCLK
+To Clock       : CCLK
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

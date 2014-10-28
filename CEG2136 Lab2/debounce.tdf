@@ -1,0 +1,32 @@
+%********************************
+*                               *
+   Mechanical Switch Debouncer   
+*                               *
+********************************%
+
+SUBDESIGN debounce
+(
+   clk         : INPUT;
+   key_pressed : INPUT;
+   pulse       : OUTPUT;
+)
+
+VARIABLE
+   count_reg[7..0] : DFF;
+   at_zero         : NODE;
+
+BEGIN
+
+   % Preset to 255 when key bounces or is not %
+   % pressed.  Decrement when key is pressed. %
+   count_reg[].clk = clk;
+   count_reg[].prn = key_pressed;
+   count_reg[].d   = count_reg[].q - (0,!at_zero);
+
+   % Emit single pulse when counter reaches 1. %
+   pulse = count_reg[].q == h"01";
+
+   % Don't let counter decrement below zero. %
+   at_zero = count_reg[].q == h"00";
+
+END;

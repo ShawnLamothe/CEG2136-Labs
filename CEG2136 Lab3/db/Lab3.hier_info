@@ -1,0 +1,153 @@
+|arithcircuit4bits
+C3 <= fulladder1bit:inst5.Sum_out
+A3 => 74153:inst36.1C1
+A3 => 74153:inst36.1C0
+A3 => 74153:inst36.1C2
+A3 => inst26.IN0
+B3 => 74153:inst36.2C0
+B3 => inst27.IN0
+S1 => 74153:inst36.B
+S1 => 74153:inst23.B
+S1 => 74153:inst24.B
+S1 => 74153:inst25.B
+S2 => 74153:inst36.A
+S2 => 74153:inst23.A
+S2 => 74153:inst24.A
+S2 => 74153:inst25.A
+A2 => 74153:inst23.1C1
+A2 => 74153:inst23.1C0
+A2 => 74153:inst23.1C2
+A2 => inst28.IN0
+B2 => 74153:inst23.2C0
+B2 => inst29.IN0
+A1 => 74153:inst24.1C1
+A1 => 74153:inst24.1C0
+A1 => 74153:inst24.1C2
+A1 => inst30.IN0
+B1 => 74153:inst24.2C0
+B1 => inst31.IN0
+A0 => 74153:inst25.1C1
+A0 => 74153:inst25.1C0
+A0 => 74153:inst25.1C2
+A0 => inst32.IN0
+B0 => 74153:inst25.2C0
+B0 => inst33.IN0
+S0 => fulladder1bit:inst6.Carry_in
+C2 <= fulladder1bit:inst4.Sum_out
+C1 <= fulladder1bit:inst.Sum_out
+C0 <= fulladder1bit:inst6.Sum_out
+Carry_out <= fulladder1bit:inst5.Carry_out
+
+
+|arithcircuit4bits|fulladder1bit:inst5
+Sum_out <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+X_in => inst.IN0
+X_in => inst2.IN1
+Y_in => inst.IN1
+Y_in => inst2.IN0
+Carry_in => inst1.IN1
+Carry_in => inst3.IN0
+Carry_out <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|arithcircuit4bits|74153:inst36
+1Y <= 9.DB_MAX_OUTPUT_PORT_TYPE
+1GN => 26.IN0
+B => 27.IN0
+A => 29.IN0
+1C0 => 1.IN3
+1C1 => 2.IN3
+1C2 => 3.IN3
+1C3 => 4.IN3
+2Y <= 10.DB_MAX_OUTPUT_PORT_TYPE
+2C0 => 5.IN0
+2GN => 25.IN0
+2C1 => 6.IN0
+2C2 => 7.IN0
+2C3 => 8.IN0
+
+
+|arithcircuit4bits|fulladder1bit:inst4
+Sum_out <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+X_in => inst.IN0
+X_in => inst2.IN1
+Y_in => inst.IN1
+Y_in => inst2.IN0
+Carry_in => inst1.IN1
+Carry_in => inst3.IN0
+Carry_out <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|arithcircuit4bits|74153:inst23
+1Y <= 9.DB_MAX_OUTPUT_PORT_TYPE
+1GN => 26.IN0
+B => 27.IN0
+A => 29.IN0
+1C0 => 1.IN3
+1C1 => 2.IN3
+1C2 => 3.IN3
+1C3 => 4.IN3
+2Y <= 10.DB_MAX_OUTPUT_PORT_TYPE
+2C0 => 5.IN0
+2GN => 25.IN0
+2C1 => 6.IN0
+2C2 => 7.IN0
+2C3 => 8.IN0
+
+
+|arithcircuit4bits|fulladder1bit:inst
+Sum_out <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+X_in => inst.IN0
+X_in => inst2.IN1
+Y_in => inst.IN1
+Y_in => inst2.IN0
+Carry_in => inst1.IN1
+Carry_in => inst3.IN0
+Carry_out <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|arithcircuit4bits|74153:inst24
+1Y <= 9.DB_MAX_OUTPUT_PORT_TYPE
+1GN => 26.IN0
+B => 27.IN0
+A => 29.IN0
+1C0 => 1.IN3
+1C1 => 2.IN3
+1C2 => 3.IN3
+1C3 => 4.IN3
+2Y <= 10.DB_MAX_OUTPUT_PORT_TYPE
+2C0 => 5.IN0
+2GN => 25.IN0
+2C1 => 6.IN0
+2C2 => 7.IN0
+2C3 => 8.IN0
+
+
+|arithcircuit4bits|fulladder1bit:inst6
+Sum_out <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+X_in => inst.IN0
+X_in => inst2.IN1
+Y_in => inst.IN1
+Y_in => inst2.IN0
+Carry_in => inst1.IN1
+Carry_in => inst3.IN0
+Carry_out <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|arithcircuit4bits|74153:inst25
+1Y <= 9.DB_MAX_OUTPUT_PORT_TYPE
+1GN => 26.IN0
+B => 27.IN0
+A => 29.IN0
+1C0 => 1.IN3
+1C1 => 2.IN3
+1C2 => 3.IN3
+1C3 => 4.IN3
+2Y <= 10.DB_MAX_OUTPUT_PORT_TYPE
+2C0 => 5.IN0
+2GN => 25.IN0
+2C1 => 6.IN0
+2C2 => 7.IN0
+2C3 => 8.IN0
+
+

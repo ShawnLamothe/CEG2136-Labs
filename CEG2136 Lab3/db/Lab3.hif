@@ -1,0 +1,304 @@
+Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+32
+1901
+OFF
+OFF
+OFF
+ON
+ON
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+fulladder1bit_p
+# storage
+db|Lab3.(1).cnf
+db|Lab3.(1).cnf
+# case_insensitive
+# source_file
+fulladder1bit_p.bdf
+c8e769a7e10ce55a1aaa78e13eb1c2
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+state4bits
+# storage
+db|Lab3.(2).cnf
+db|Lab3.(2).cnf
+# case_insensitive
+# source_file
+state4bits.bdf
+ae86ce837187d6af2027ac80b0a0207c
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+74257
+# storage
+db|Lab3.(4).cnf
+db|Lab3.(4).cnf
+# case_insensitive
+# source_file
+q:|altera.09|altera|90sp2|quartus|libraries|others|maxplus2|74257.bdf
+1b4762d743b73040481a8d4e94dd5abc
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+74153
+# storage
+db|Lab3.(7).cnf
+db|Lab3.(7).cnf
+# case_insensitive
+# source_file
+q:|altera.09|altera|90sp2|quartus|libraries|others|maxplus2|74153.bdf
+36cd3b3c347cff8c6b0555687a75ad
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+74153:inst36
+74153:inst23
+74153:inst24
+74153:inst25
+}
+# macro_sequence
+
+# end
+# entity
+logiccircuit4bit
+# storage
+db|Lab3.(8).cnf
+db|Lab3.(8).cnf
+# case_insensitive
+# source_file
+logiccircuit4bit.bdf
+7414c598a8532ea4838eaac123e160eb
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+81mux
+# storage
+db|Lab3.(10).cnf
+db|Lab3.(10).cnf
+# case_insensitive
+# source_file
+q:|altera.09|altera|90sp2|quartus|libraries|others|maxplus2|81mux.tdf
+635c2fab628ab0ab152eb6fab13651e1
+7
+# user_parameter {
+DEVICE_FAMILY
+MAX7000S
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+Y
+-1
+3
+GN
+-1
+3
+D7
+-1
+3
+D6
+-1
+3
+D5
+-1
+3
+D4
+-1
+3
+D3
+-1
+3
+D2
+-1
+3
+D0
+-1
+3
+C
+-1
+3
+B
+-1
+3
+A
+-1
+3
+D1
+-1
+2
+}
+# include_file {
+q:|altera.09|altera|90sp2|quartus|libraries|megafunctions|aglobal.inc
+99832fdf63412df51d7531202d74e75
+}
+# macro_sequence
+
+# end
+# entity
+p81mux
+# storage
+db|Lab3.(11).cnf
+db|Lab3.(11).cnf
+# case_insensitive
+# source_file
+q:|altera.09|altera|90sp2|quartus|libraries|others|maxplus2|p81mux.bdf
+b1e05adc35b01ffca73a9fee76ba5bf1
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+fulladder1bit
+# storage
+db|Lab3.(6).cnf
+db|Lab3.(6).cnf
+# case_insensitive
+# source_file
+fulladder1bit.bdf
+45a2b7f1411c1b4f9fbfe977f36d47cd
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+fulladder1bit:inst5
+fulladder1bit:inst4
+fulladder1bit:inst
+fulladder1bit:inst6
+}
+# macro_sequence
+
+# end
+# entity
+register4bits
+# storage
+db|Lab3.(3).cnf
+db|Lab3.(3).cnf
+# case_insensitive
+# source_file
+register4bits.bdf
+ef366a4e7086d1f77260eb45809ecf79
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+logiccircuit1bit
+# storage
+db|Lab3.(5).cnf
+db|Lab3.(5).cnf
+# case_insensitive
+# source_file
+logiccircuit1bit.bdf
+912a32937538a94a82693cb95552a31
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+arithcircuit4bits
+# storage
+db|Lab3.(9).cnf
+db|Lab3.(9).cnf
+# case_insensitive
+# source_file
+arithcircuit4bits.bdf
+4f6e6d6d6b3a6422da1ec72ab3138d3
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+lab3top
+# storage
+db|Lab3.(0).cnf
+db|Lab3.(0).cnf
+# case_insensitive
+# source_file
+lab3top.bdf
+e81810801c4a48e444d389f135f122e
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# complete
+

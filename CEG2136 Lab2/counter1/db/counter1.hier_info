@@ -1,0 +1,36 @@
+|test2
+Q2 <= counter1:inst1.Q2
+CLOCK => debounce:inst.clk
+BUTTON => debounce:inst.key_pressed
+Q1 <= counter1:inst1.Q1
+Q0 <= counter1:inst1.Q0
+
+
+|test2|counter1:inst1
+Q2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+CCLK => inst.CLK
+CCLK => inst1.CLK
+CCLK => inst2.CLK
+Q1 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+Q0 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|test2|debounce:inst
+clk => count_reg[7].CLK
+clk => count_reg[6].CLK
+clk => count_reg[5].CLK
+clk => count_reg[4].CLK
+clk => count_reg[3].CLK
+clk => count_reg[2].CLK
+clk => count_reg[1].CLK
+clk => count_reg[0].CLK
+key_pressed => count_reg[7].PRESET
+key_pressed => count_reg[6].PRESET
+key_pressed => count_reg[5].PRESET
+key_pressed => count_reg[4].PRESET
+key_pressed => count_reg[3].PRESET
+key_pressed => count_reg[2].PRESET
+key_pressed => count_reg[1].PRESET
+key_pressed => count_reg[0].PRESET
+
+

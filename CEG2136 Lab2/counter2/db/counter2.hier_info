@@ -1,0 +1,28 @@
+|counter2
+Q3 <= JK3.DB_MAX_OUTPUT_PORT_TYPE
+CCLK => debounce:inst.clk
+BUTTON => debounce:inst.key_pressed
+Q2 <= JK2.DB_MAX_OUTPUT_PORT_TYPE
+Q1 <= JK1.DB_MAX_OUTPUT_PORT_TYPE
+Q0 <= JK0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter2|debounce:inst
+clk => count_reg[7].CLK
+clk => count_reg[6].CLK
+clk => count_reg[5].CLK
+clk => count_reg[4].CLK
+clk => count_reg[3].CLK
+clk => count_reg[2].CLK
+clk => count_reg[1].CLK
+clk => count_reg[0].CLK
+key_pressed => count_reg[7].PRESET
+key_pressed => count_reg[6].PRESET
+key_pressed => count_reg[5].PRESET
+key_pressed => count_reg[4].PRESET
+key_pressed => count_reg[3].PRESET
+key_pressed => count_reg[2].PRESET
+key_pressed => count_reg[1].PRESET
+key_pressed => count_reg[0].PRESET
+
+
