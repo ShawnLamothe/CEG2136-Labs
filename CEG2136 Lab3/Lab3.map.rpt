@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab3
-Thu Oct 23 14:06:22 2014
+Thu Oct 30 14:18:01 2014
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -12,7 +12,11 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
   4. Analysis & Synthesis Source Files Read
   5. Analysis & Synthesis Resource Usage Summary
   6. Analysis & Synthesis Resource Utilization by Entity
-  7. Analysis & Synthesis Messages
+  7. Parameter Settings for User Entity Instance: logiccircuit4bit:inst6|logiccircuit1bit:inst|81mux:inst
+  8. Parameter Settings for User Entity Instance: logiccircuit4bit:inst6|logiccircuit1bit:inst1|81mux:inst
+  9. Parameter Settings for User Entity Instance: logiccircuit4bit:inst6|logiccircuit1bit:inst2|81mux:inst
+ 10. Parameter Settings for User Entity Instance: logiccircuit4bit:inst6|logiccircuit1bit:inst3|81mux:inst
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -38,112 +42,188 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                               ;
 +-----------------------------+----------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Thu Oct 23 14:06:22 2014        ;
+; Analysis & Synthesis Status ; Successful - Thu Oct 30 14:18:01 2014        ;
 ; Quartus II Version          ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name               ; Lab3                                         ;
-; Top-level Entity Name       ; arithcircuit4bits                            ;
+; Top-level Entity Name       ; lab3top                                      ;
 ; Family                      ; MAX7000S                                     ;
-; Total macrocells            ; 23                                           ;
-; Total pins                  ; 16                                           ;
+; Total macrocells            ; 64                                           ;
+; Total pins                  ; 22                                           ;
 +-----------------------------+----------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                    ;
-+--------------------------------------------------------------+-------------------+---------------+
-; Option                                                       ; Setting           ; Default Value ;
-+--------------------------------------------------------------+-------------------+---------------+
-; Device                                                       ; EPM7064SLC84-7    ;               ;
-; Top-level entity name                                        ; arithcircuit4bits ; Lab3          ;
-; Family name                                                  ; MAX7000S          ; Stratix II    ;
-; Use Generated Physical Constraints File                      ; Off               ;               ;
-; Use smart compilation                                        ; Off               ; Off           ;
-; Create Debugging Nodes for IP Cores                          ; Off               ; Off           ;
-; Preserve fewer node names                                    ; On                ; On            ;
-; Disable OpenCore Plus hardware evaluation                    ; Off               ; Off           ;
-; Verilog Version                                              ; Verilog_2001      ; Verilog_2001  ;
-; VHDL Version                                                 ; VHDL93            ; VHDL93        ;
-; State Machine Processing                                     ; Auto              ; Auto          ;
-; Safe State Machine                                           ; Off               ; Off           ;
-; Extract Verilog State Machines                               ; On                ; On            ;
-; Extract VHDL State Machines                                  ; On                ; On            ;
-; Ignore Verilog initial constructs                            ; Off               ; Off           ;
-; Iteration limit for constant Verilog loops                   ; 5000              ; 5000          ;
-; Iteration limit for non-constant Verilog loops               ; 250               ; 250           ;
-; Add Pass-Through Logic to Inferred RAMs                      ; On                ; On            ;
-; Parallel Synthesis                                           ; Off               ; Off           ;
-; NOT Gate Push-Back                                           ; On                ; On            ;
-; Power-Up Don't Care                                          ; On                ; On            ;
-; Remove Duplicate Registers                                   ; On                ; On            ;
-; Ignore CARRY Buffers                                         ; Off               ; Off           ;
-; Ignore CASCADE Buffers                                       ; Off               ; Off           ;
-; Ignore GLOBAL Buffers                                        ; Off               ; Off           ;
-; Ignore ROW GLOBAL Buffers                                    ; Off               ; Off           ;
-; Ignore LCELL Buffers                                         ; Auto              ; Auto          ;
-; Ignore SOFT Buffers                                          ; Off               ; Off           ;
-; Limit AHDL Integers to 32 Bits                               ; Off               ; Off           ;
-; Optimization Technique                                       ; Speed             ; Speed         ;
-; Allow XOR Gate Usage                                         ; On                ; On            ;
-; Auto Logic Cell Insertion                                    ; On                ; On            ;
-; Parallel Expander Chain Length                               ; 4                 ; 4             ;
-; Auto Parallel Expanders                                      ; On                ; On            ;
-; Auto Open-Drain Pins                                         ; On                ; On            ;
-; Auto Resource Sharing                                        ; Off               ; Off           ;
-; Maximum Fan-in Per Macrocell                                 ; 100               ; 100           ;
-; Use LogicLock Constraints during Resource Balancing          ; On                ; On            ;
-; Ignore translate_off and synthesis_off directives            ; Off               ; Off           ;
-; Show Parameter Settings Tables in Synthesis Report           ; On                ; On            ;
-; HDL message level                                            ; Level2            ; Level2        ;
-; Suppress Register Optimization Related Messages              ; Off               ; Off           ;
-; Number of Removed Registers Reported in Synthesis Report     ; 100               ; 100           ;
-; Number of Inverted Registers Reported in Synthesis Report    ; 100               ; 100           ;
-; Block Design Naming                                          ; Auto              ; Auto          ;
-; Synthesis Effort                                             ; Auto              ; Auto          ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal ; On                ; On            ;
-; Analysis & Synthesis Message Level                           ; Medium            ; Medium        ;
-+--------------------------------------------------------------+-------------------+---------------+
++-----------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                 ;
++--------------------------------------------------------------+----------------+---------------+
+; Option                                                       ; Setting        ; Default Value ;
++--------------------------------------------------------------+----------------+---------------+
+; Device                                                       ; EPM7128SLC84-7 ;               ;
+; Top-level entity name                                        ; lab3top        ; Lab3          ;
+; Family name                                                  ; MAX7000S       ; Stratix II    ;
+; Use Generated Physical Constraints File                      ; Off            ;               ;
+; Use smart compilation                                        ; Off            ; Off           ;
+; Create Debugging Nodes for IP Cores                          ; Off            ; Off           ;
+; Preserve fewer node names                                    ; On             ; On            ;
+; Disable OpenCore Plus hardware evaluation                    ; Off            ; Off           ;
+; Verilog Version                                              ; Verilog_2001   ; Verilog_2001  ;
+; VHDL Version                                                 ; VHDL93         ; VHDL93        ;
+; State Machine Processing                                     ; Auto           ; Auto          ;
+; Safe State Machine                                           ; Off            ; Off           ;
+; Extract Verilog State Machines                               ; On             ; On            ;
+; Extract VHDL State Machines                                  ; On             ; On            ;
+; Ignore Verilog initial constructs                            ; Off            ; Off           ;
+; Iteration limit for constant Verilog loops                   ; 5000           ; 5000          ;
+; Iteration limit for non-constant Verilog loops               ; 250            ; 250           ;
+; Add Pass-Through Logic to Inferred RAMs                      ; On             ; On            ;
+; Parallel Synthesis                                           ; Off            ; Off           ;
+; NOT Gate Push-Back                                           ; On             ; On            ;
+; Power-Up Don't Care                                          ; On             ; On            ;
+; Remove Duplicate Registers                                   ; On             ; On            ;
+; Ignore CARRY Buffers                                         ; Off            ; Off           ;
+; Ignore CASCADE Buffers                                       ; Off            ; Off           ;
+; Ignore GLOBAL Buffers                                        ; Off            ; Off           ;
+; Ignore ROW GLOBAL Buffers                                    ; Off            ; Off           ;
+; Ignore LCELL Buffers                                         ; Auto           ; Auto          ;
+; Ignore SOFT Buffers                                          ; Off            ; Off           ;
+; Limit AHDL Integers to 32 Bits                               ; Off            ; Off           ;
+; Optimization Technique                                       ; Speed          ; Speed         ;
+; Allow XOR Gate Usage                                         ; On             ; On            ;
+; Auto Logic Cell Insertion                                    ; On             ; On            ;
+; Parallel Expander Chain Length                               ; 4              ; 4             ;
+; Auto Parallel Expanders                                      ; On             ; On            ;
+; Auto Open-Drain Pins                                         ; On             ; On            ;
+; Auto Resource Sharing                                        ; Off            ; Off           ;
+; Maximum Fan-in Per Macrocell                                 ; 100            ; 100           ;
+; Use LogicLock Constraints during Resource Balancing          ; On             ; On            ;
+; Ignore translate_off and synthesis_off directives            ; Off            ; Off           ;
+; Show Parameter Settings Tables in Synthesis Report           ; On             ; On            ;
+; HDL message level                                            ; Level2         ; Level2        ;
+; Suppress Register Optimization Related Messages              ; Off            ; Off           ;
+; Number of Removed Registers Reported in Synthesis Report     ; 100            ; 100           ;
+; Number of Inverted Registers Reported in Synthesis Report    ; 100            ; 100           ;
+; Block Design Naming                                          ; Auto           ; Auto          ;
+; Synthesis Effort                                             ; Auto           ; Auto          ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal ; On             ; On            ;
+; Analysis & Synthesis Message Level                           ; Medium         ; Medium        ;
++--------------------------------------------------------------+----------------+---------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                          ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                          ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------+
-; arithcircuit4bits.bdf            ; yes             ; User Block Diagram/Schematic File  ; E:/CEG2136 Lab3/arithcircuit4bits.bdf                                 ;
-; fulladder1bit.bdf                ; yes             ; User Block Diagram/Schematic File  ; E:/CEG2136 Lab3/fulladder1bit.bdf                                     ;
-; 74153.bdf                        ; yes             ; Megafunction                       ; q:/altera.09/altera/90sp2/quartus/libraries/others/maxplus2/74153.bdf ;
-+----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                           ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                           ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------+
+; arithcircuit4bits.bdf            ; yes             ; User Block Diagram/Schematic File  ; E:/CEG2136 Lab3/arithcircuit4bits.bdf                                  ;
+; fulladder1bit.bdf                ; yes             ; User Block Diagram/Schematic File  ; E:/CEG2136 Lab3/fulladder1bit.bdf                                      ;
+; logiccircuit1bit.bdf             ; yes             ; User Block Diagram/Schematic File  ; E:/CEG2136 Lab3/logiccircuit1bit.bdf                                   ;
+; logiccircuit4bit.bdf             ; yes             ; User Block Diagram/Schematic File  ; E:/CEG2136 Lab3/logiccircuit4bit.bdf                                   ;
+; register4bits.bdf                ; yes             ; User Block Diagram/Schematic File  ; E:/CEG2136 Lab3/register4bits.bdf                                      ;
+; state4bits.bdf                   ; yes             ; User Block Diagram/Schematic File  ; E:/CEG2136 Lab3/state4bits.bdf                                         ;
+; lab3top.bdf                      ; yes             ; User Block Diagram/Schematic File  ; E:/CEG2136 Lab3/lab3top.bdf                                            ;
+; 74257.bdf                        ; yes             ; Megafunction                       ; q:/altera.09/altera/90sp2/quartus/libraries/others/maxplus2/74257.bdf  ;
+; 81mux.tdf                        ; yes             ; Megafunction                       ; q:/altera.09/altera/90sp2/quartus/libraries/others/maxplus2/81mux.tdf  ;
+; aglobal.inc                      ; yes             ; Megafunction                       ; q:/altera.09/altera/90sp2/quartus/libraries/megafunctions/aglobal.inc  ;
+; p81mux.bdf                       ; yes             ; Megafunction                       ; q:/altera.09/altera/90sp2/quartus/libraries/others/maxplus2/p81mux.bdf ;
+; 74153.bdf                        ; yes             ; Megafunction                       ; q:/altera.09/altera/90sp2/quartus/libraries/others/maxplus2/74153.bdf  ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------+
 
 
-+---------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary ;
-+----------------------+----------------------+
-; Resource             ; Usage                ;
-+----------------------+----------------------+
-; Logic cells          ; 23                   ;
-; Total registers      ; 0                    ;
-; I/O pins             ; 16                   ;
-; Shareable expanders  ; 20                   ;
-; Parallel expanders   ; 9                    ;
-; Maximum fan-out node ; S1                   ;
-; Maximum fan-out      ; 40                   ;
-; Total fan-out        ; 252                  ;
-; Average fan-out      ; 4.27                 ;
-+----------------------+----------------------+
++--------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary      ;
++----------------------+---------------------------+
+; Resource             ; Usage                     ;
++----------------------+---------------------------+
+; Logic cells          ; 64                        ;
+; Total registers      ; 20                        ;
+; I/O pins             ; 22                        ;
+; Shareable expanders  ; 27                        ;
+; Parallel expanders   ; 24                        ;
+; Maximum fan-out node ; register4bits:inst|inst15 ;
+; Maximum fan-out      ; 56                        ;
+; Total fan-out        ; 567                       ;
+; Average fan-out      ; 5.02                      ;
++----------------------+---------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                    ;
-+----------------------------+------------+------+----------------------------------------+--------------+
-; Compilation Hierarchy Node ; Macrocells ; Pins ; Full Hierarchy Name                    ; Library Name ;
-+----------------------------+------------+------+----------------------------------------+--------------+
-; |arithcircuit4bits         ; 23         ; 16   ; |arithcircuit4bits                     ; work         ;
-;    |74153:inst23|          ; 2          ; 0    ; |arithcircuit4bits|74153:inst23        ; work         ;
-;    |fulladder1bit:inst4|   ; 4          ; 0    ; |arithcircuit4bits|fulladder1bit:inst4 ; work         ;
-;    |fulladder1bit:inst5|   ; 10         ; 0    ; |arithcircuit4bits|fulladder1bit:inst5 ; work         ;
-;    |fulladder1bit:inst6|   ; 2          ; 0    ; |arithcircuit4bits|fulladder1bit:inst6 ; work         ;
-;    |fulladder1bit:inst|    ; 5          ; 0    ; |arithcircuit4bits|fulladder1bit:inst  ; work         ;
-+----------------------------+------------+------+----------------------------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                            ;
++-------------------------------+------------+------+-----------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node    ; Macrocells ; Pins ; Full Hierarchy Name                                                         ; Library Name ;
++-------------------------------+------------+------+-----------------------------------------------------------------------------+--------------+
+; |lab3top                      ; 64         ; 22   ; |lab3top                                                                    ; work         ;
+;    |74257:inst11|             ; 26         ; 0    ; |lab3top|74257:inst11                                                       ; work         ;
+;    |arithcircuit4bits:inst12| ; 14         ; 0    ; |lab3top|arithcircuit4bits:inst12                                           ; work         ;
+;       |74153:inst36|          ; 2          ; 0    ; |lab3top|arithcircuit4bits:inst12|74153:inst36                              ; work         ;
+;       |fulladder1bit:inst4|   ; 4          ; 0    ; |lab3top|arithcircuit4bits:inst12|fulladder1bit:inst4                       ; work         ;
+;       |fulladder1bit:inst5|   ; 5          ; 0    ; |lab3top|arithcircuit4bits:inst12|fulladder1bit:inst5                       ; work         ;
+;       |fulladder1bit:inst|    ; 3          ; 0    ; |lab3top|arithcircuit4bits:inst12|fulladder1bit:inst                        ; work         ;
+;    |logiccircuit4bit:inst6|   ; 2          ; 0    ; |lab3top|logiccircuit4bit:inst6                                             ; work         ;
+;       |logiccircuit1bit:inst| ; 2          ; 0    ; |lab3top|logiccircuit4bit:inst6|logiccircuit1bit:inst                       ; work         ;
+;          |81mux:inst|         ; 2          ; 0    ; |lab3top|logiccircuit4bit:inst6|logiccircuit1bit:inst|81mux:inst            ; work         ;
+;             |p81mux:sub|      ; 2          ; 0    ; |lab3top|logiccircuit4bit:inst6|logiccircuit1bit:inst|81mux:inst|p81mux:sub ; work         ;
+;    |register4bits:inst1|      ; 4          ; 0    ; |lab3top|register4bits:inst1                                                ; work         ;
+;    |register4bits:inst2|      ; 4          ; 0    ; |lab3top|register4bits:inst2                                                ; work         ;
+;    |register4bits:inst3|      ; 4          ; 0    ; |lab3top|register4bits:inst3                                                ; work         ;
+;    |register4bits:inst4|      ; 4          ; 0    ; |lab3top|register4bits:inst4                                                ; work         ;
+;    |register4bits:inst|       ; 4          ; 0    ; |lab3top|register4bits:inst                                                 ; work         ;
+;    |state4bits:inst14|        ; 2          ; 0    ; |lab3top|state4bits:inst14                                                  ; work         ;
++-------------------------------+------------+------+-----------------------------------------------------------------------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: logiccircuit4bit:inst6|logiccircuit1bit:inst|81mux:inst ;
++------------------------+----------+------------------------------------------------------------------+
+; Parameter Name         ; Value    ; Type                                                             ;
++------------------------+----------+------------------------------------------------------------------+
+; DEVICE_FAMILY          ; MAX7000S ; Untyped                                                          ;
+; AUTO_CARRY_CHAINS      ; ON       ; AUTO_CARRY                                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF      ; IGNORE_CARRY                                                     ;
+; AUTO_CASCADE_CHAINS    ; ON       ; AUTO_CASCADE                                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF      ; IGNORE_CASCADE                                                   ;
++------------------------+----------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: logiccircuit4bit:inst6|logiccircuit1bit:inst1|81mux:inst ;
++------------------------+----------+-------------------------------------------------------------------+
+; Parameter Name         ; Value    ; Type                                                              ;
++------------------------+----------+-------------------------------------------------------------------+
+; DEVICE_FAMILY          ; MAX7000S ; Untyped                                                           ;
+; AUTO_CARRY_CHAINS      ; ON       ; AUTO_CARRY                                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF      ; IGNORE_CARRY                                                      ;
+; AUTO_CASCADE_CHAINS    ; ON       ; AUTO_CASCADE                                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF      ; IGNORE_CASCADE                                                    ;
++------------------------+----------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: logiccircuit4bit:inst6|logiccircuit1bit:inst2|81mux:inst ;
++------------------------+----------+-------------------------------------------------------------------+
+; Parameter Name         ; Value    ; Type                                                              ;
++------------------------+----------+-------------------------------------------------------------------+
+; DEVICE_FAMILY          ; MAX7000S ; Untyped                                                           ;
+; AUTO_CARRY_CHAINS      ; ON       ; AUTO_CARRY                                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF      ; IGNORE_CARRY                                                      ;
+; AUTO_CASCADE_CHAINS    ; ON       ; AUTO_CASCADE                                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF      ; IGNORE_CASCADE                                                    ;
++------------------------+----------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: logiccircuit4bit:inst6|logiccircuit1bit:inst3|81mux:inst ;
++------------------------+----------+-------------------------------------------------------------------+
+; Parameter Name         ; Value    ; Type                                                              ;
++------------------------+----------+-------------------------------------------------------------------+
+; DEVICE_FAMILY          ; MAX7000S ; Untyped                                                           ;
+; AUTO_CARRY_CHAINS      ; ON       ; AUTO_CARRY                                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF      ; IGNORE_CARRY                                                      ;
+; AUTO_CASCADE_CHAINS    ; ON       ; AUTO_CASCADE                                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF      ; IGNORE_CASCADE                                                    ;
++------------------------+----------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------+
@@ -152,7 +232,7 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Oct 23 14:06:17 2014
+    Info: Processing started: Thu Oct 30 14:17:54 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab3 -c Lab3
 Info: Found 1 design units, including 1 entities, in source file arithcircuit4bits.bdf
     Info: Found entity 1: arithcircuit4bits
@@ -170,19 +250,39 @@ Info: Found 1 design units, including 1 entities, in source file state4bits.bdf
     Info: Found entity 1: state4bits
 Info: Found 1 design units, including 1 entities, in source file lab3top.bdf
     Info: Found entity 1: lab3top
-Info: Elaborating entity "arithcircuit4bits" for the top level hierarchy
-Info: Elaborating entity "fulladder1bit" for hierarchy "fulladder1bit:inst5"
-Info: Elaborating entity "74153" for hierarchy "74153:inst36"
-Info: Elaborated megafunction instantiation "74153:inst36"
-Info: Implemented 59 device resources after synthesis - the final resource count might be different
-    Info: Implemented 11 input pins
-    Info: Implemented 5 output pins
-    Info: Implemented 23 macrocells
-    Info: Implemented 20 shareable expanders
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 201 megabytes
-    Info: Processing ended: Thu Oct 23 14:06:25 2014
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:04
+Info: Found 1 design units, including 1 entities, in source file arith_test.bdf
+    Info: Found entity 1: arith_test
+Info: Elaborating entity "lab3top" for the top level hierarchy
+Info: Elaborating entity "register4bits" for hierarchy "register4bits:inst1"
+Info: Elaborating entity "state4bits" for hierarchy "state4bits:inst14"
+Info: Elaborating entity "74257" for hierarchy "74257:inst11"
+Info: Elaborated megafunction instantiation "74257:inst11"
+Info: Elaborating entity "logiccircuit4bit" for hierarchy "logiccircuit4bit:inst6"
+Info: Elaborating entity "logiccircuit1bit" for hierarchy "logiccircuit4bit:inst6|logiccircuit1bit:inst"
+Info: Elaborating entity "81mux" for hierarchy "logiccircuit4bit:inst6|logiccircuit1bit:inst|81mux:inst"
+Info: Elaborated megafunction instantiation "logiccircuit4bit:inst6|logiccircuit1bit:inst|81mux:inst"
+Info: Elaborating entity "p81mux" for hierarchy "logiccircuit4bit:inst6|logiccircuit1bit:inst|81mux:inst|p81mux:sub"
+Info: Elaborated megafunction instantiation "logiccircuit4bit:inst6|logiccircuit1bit:inst|81mux:inst|p81mux:sub", which is child of megafunction instantiation "logiccircuit4bit:inst6|logiccircuit1bit:inst|81mux:inst"
+Info: Elaborating entity "arithcircuit4bits" for hierarchy "arithcircuit4bits:inst12"
+Info: Elaborating entity "fulladder1bit" for hierarchy "arithcircuit4bits:inst12|fulladder1bit:inst5"
+Info: Elaborating entity "74153" for hierarchy "arithcircuit4bits:inst12|74153:inst36"
+Info: Elaborated megafunction instantiation "arithcircuit4bits:inst12|74153:inst36"
+Warning: Tri-state node(s) do not directly drive top-level pin(s)
+    Warning: Converted the fan-out from the tri-state buffer "74257:inst11|20" to the node "register4bits:inst2|inst14" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "74257:inst11|29" to the node "register4bits:inst2|inst17" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "74257:inst11|26" to the node "register4bits:inst2|inst16" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "74257:inst11|22" to the node "register4bits:inst2|inst15" into an OR gate
+Info: Promoted pin-driven signal(s) to global signal
+    Info: Promoted clock signal driven by pin "CLOCK" to global clock signal
+Info: Implemented 113 device resources after synthesis - the final resource count might be different
+    Info: Implemented 14 input pins
+    Info: Implemented 8 output pins
+    Info: Implemented 64 macrocells
+    Info: Implemented 27 shareable expanders
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 203 megabytes
+    Info: Processing ended: Thu Oct 30 14:18:01 2014
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:05
 
 

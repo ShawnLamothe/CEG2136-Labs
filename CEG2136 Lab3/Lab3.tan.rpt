@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for Lab3
-Thu Oct 23 14:06:32 2014
+Thu Oct 30 14:18:08 2014
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -9,9 +9,13 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
   1. Legal Notice
   2. Timing Analyzer Summary
   3. Timing Analyzer Settings
-  4. Parallel Compilation
-  5. tpd
-  6. Timing Analyzer Messages
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'CLOCK'
+  7. tsu
+  8. tco
+  9. th
+ 10. Timing Analyzer Messages
 
 
 
@@ -34,14 +38,17 @@ applicable agreement for further details.
 
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Timing Analyzer Summary                                                                                                      ;
-+------------------------------+-------+---------------+-------------+------+-----------+------------+----------+--------------+
-; Type                         ; Slack ; Required Time ; Actual Time ; From ; To        ; From Clock ; To Clock ; Failed Paths ;
-+------------------------------+-------+---------------+-------------+------+-----------+------------+----------+--------------+
-; Worst-case tpd               ; N/A   ; None          ; 14.900 ns   ; A1   ; Carry_out ; --         ; --       ; 0            ;
-; Total number of failed paths ;       ;               ;             ;      ;           ;            ;          ; 0            ;
-+------------------------------+-------+---------------+-------------+------+-----------+------------+----------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                  ;
++------------------------------+-------+---------------+----------------------------------+----------------------------+----------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                       ; To                         ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+----------------------------+----------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 6.000 ns                         ; S3                         ; register4bits:inst|inst14  ; --         ; CLOCK    ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 4.500 ns                         ; register4bits:inst2|inst17 ; C0                         ; CLOCK      ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -1.000 ns                        ; S3                         ; register4bits:inst|inst14  ; --         ; CLOCK    ; 0            ;
+; Clock Setup: 'CLOCK'         ; N/A   ; None          ; 47.17 MHz ( period = 21.200 ns ) ; register4bits:inst3|inst17 ; register4bits:inst1|inst16 ; CLOCK      ; CLOCK    ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                            ;                            ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+----------------------------+----------------------------+------------+----------+--------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------+
@@ -49,7 +56,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------+--------------------+------+----+-------------+
 ; Option                                                              ; Setting            ; From ; To ; Entity Name ;
 +---------------------------------------------------------------------+--------------------+------+----+-------------+
-; Device Name                                                         ; EPM7064SLC84-7     ;      ;    ;             ;
+; Device Name                                                         ; EPM7128SLC84-7     ;      ;    ;             ;
 ; Timing Models                                                       ; Final              ;      ;    ;             ;
 ; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
 ; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
@@ -61,8 +68,6 @@ applicable agreement for further details.
 ; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
 ; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
 ; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
-; Minimum Core Junction Temperature                                   ; 0                  ;      ;    ;             ;
-; Maximum Core Junction Temperature                                   ; 85                 ;      ;    ;             ;
 ; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
 ; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
 ; Number of paths to report                                           ; 200                ;      ;    ;             ;
@@ -76,6 +81,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------+--------------------+------+----+-------------+
 
 
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; CLOCK           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
 Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
 +-------------------------------------+
 ; Parallel Compilation                ;
@@ -87,55 +101,155 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------+
-; tpd                                                            ;
-+-------+-------------------+-----------------+------+-----------+
-; Slack ; Required P2P Time ; Actual P2P Time ; From ; To        ;
-+-------+-------------------+-----------------+------+-----------+
-; N/A   ; None              ; 14.900 ns       ; S1   ; Carry_out ;
-; N/A   ; None              ; 14.900 ns       ; S2   ; Carry_out ;
-; N/A   ; None              ; 14.900 ns       ; A0   ; Carry_out ;
-; N/A   ; None              ; 14.900 ns       ; B0   ; Carry_out ;
-; N/A   ; None              ; 14.900 ns       ; S0   ; Carry_out ;
-; N/A   ; None              ; 14.900 ns       ; B1   ; Carry_out ;
-; N/A   ; None              ; 14.900 ns       ; A1   ; Carry_out ;
-; N/A   ; None              ; 14.100 ns       ; B2   ; Carry_out ;
-; N/A   ; None              ; 14.100 ns       ; A2   ; Carry_out ;
-; N/A   ; None              ; 12.500 ns       ; S1   ; C3        ;
-; N/A   ; None              ; 12.500 ns       ; S2   ; C3        ;
-; N/A   ; None              ; 12.500 ns       ; A0   ; C3        ;
-; N/A   ; None              ; 12.500 ns       ; B0   ; C3        ;
-; N/A   ; None              ; 12.500 ns       ; S0   ; C3        ;
-; N/A   ; None              ; 12.500 ns       ; B1   ; C3        ;
-; N/A   ; None              ; 12.500 ns       ; A1   ; C3        ;
-; N/A   ; None              ; 12.500 ns       ; B2   ; C3        ;
-; N/A   ; None              ; 12.500 ns       ; A2   ; C3        ;
-; N/A   ; None              ; 12.300 ns       ; S1   ; C2        ;
-; N/A   ; None              ; 12.300 ns       ; S2   ; C2        ;
-; N/A   ; None              ; 12.300 ns       ; A0   ; C2        ;
-; N/A   ; None              ; 12.300 ns       ; S0   ; C2        ;
-; N/A   ; None              ; 11.500 ns       ; B1   ; C2        ;
-; N/A   ; None              ; 11.500 ns       ; A1   ; C2        ;
-; N/A   ; None              ; 11.500 ns       ; B2   ; C2        ;
-; N/A   ; None              ; 11.500 ns       ; A2   ; C2        ;
-; N/A   ; None              ; 11.500 ns       ; S1   ; C1        ;
-; N/A   ; None              ; 11.500 ns       ; S2   ; C1        ;
-; N/A   ; None              ; 11.500 ns       ; B1   ; C1        ;
-; N/A   ; None              ; 11.500 ns       ; A1   ; C1        ;
-; N/A   ; None              ; 9.100 ns        ; A3   ; Carry_out ;
-; N/A   ; None              ; 9.100 ns        ; B3   ; Carry_out ;
-; N/A   ; None              ; 8.300 ns        ; A3   ; C3        ;
-; N/A   ; None              ; 8.300 ns        ; B3   ; C3        ;
-; N/A   ; None              ; 8.300 ns        ; B0   ; C2        ;
-; N/A   ; None              ; 8.300 ns        ; A0   ; C1        ;
-; N/A   ; None              ; 8.300 ns        ; B0   ; C1        ;
-; N/A   ; None              ; 8.300 ns        ; S0   ; C1        ;
-; N/A   ; None              ; 8.300 ns        ; S1   ; C0        ;
-; N/A   ; None              ; 8.300 ns        ; S2   ; C0        ;
-; N/A   ; None              ; 8.300 ns        ; A0   ; C0        ;
-; N/A   ; None              ; 8.300 ns        ; B0   ; C0        ;
-; N/A   ; None              ; 7.500 ns        ; S0   ; C0        ;
-+-------+-------------------+-----------------+------+-----------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'CLOCK'                                                                                                                                                                                           ;
++-------+----------------------------------+----------------------------+----------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)             ; From                       ; To                         ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+----------------------------------+----------------------------+----------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 47.17 MHz ( period = 21.200 ns ) ; register4bits:inst|inst15  ; register4bits:inst1|inst16 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 17.200 ns               ;
+; N/A   ; 47.17 MHz ( period = 21.200 ns ) ; register4bits:inst|inst16  ; register4bits:inst1|inst16 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 17.200 ns               ;
+; N/A   ; 47.17 MHz ( period = 21.200 ns ) ; register4bits:inst|inst17  ; register4bits:inst1|inst16 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 17.200 ns               ;
+; N/A   ; 47.17 MHz ( period = 21.200 ns ) ; register4bits:inst4|inst16 ; register4bits:inst1|inst16 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 17.200 ns               ;
+; N/A   ; 47.17 MHz ( period = 21.200 ns ) ; register4bits:inst4|inst17 ; register4bits:inst1|inst16 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 17.200 ns               ;
+; N/A   ; 47.17 MHz ( period = 21.200 ns ) ; register4bits:inst3|inst16 ; register4bits:inst1|inst16 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 17.200 ns               ;
+; N/A   ; 47.17 MHz ( period = 21.200 ns ) ; register4bits:inst3|inst17 ; register4bits:inst1|inst16 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 17.200 ns               ;
+; N/A   ; 49.02 MHz ( period = 20.400 ns ) ; register4bits:inst|inst14  ; register4bits:inst1|inst16 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 16.400 ns               ;
+; N/A   ; 49.02 MHz ( period = 20.400 ns ) ; register4bits:inst4|inst14 ; register4bits:inst1|inst16 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 16.400 ns               ;
+; N/A   ; 49.02 MHz ( period = 20.400 ns ) ; register4bits:inst4|inst15 ; register4bits:inst1|inst16 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 16.400 ns               ;
+; N/A   ; 49.02 MHz ( period = 20.400 ns ) ; register4bits:inst3|inst15 ; register4bits:inst1|inst16 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 16.400 ns               ;
+; N/A   ; 51.55 MHz ( period = 19.400 ns ) ; register4bits:inst|inst15  ; register4bits:inst1|inst14 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 15.400 ns               ;
+; N/A   ; 51.55 MHz ( period = 19.400 ns ) ; register4bits:inst|inst16  ; register4bits:inst1|inst14 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 15.400 ns               ;
+; N/A   ; 51.55 MHz ( period = 19.400 ns ) ; register4bits:inst|inst17  ; register4bits:inst1|inst14 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 15.400 ns               ;
+; N/A   ; 51.55 MHz ( period = 19.400 ns ) ; register4bits:inst4|inst16 ; register4bits:inst1|inst14 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 15.400 ns               ;
+; N/A   ; 51.55 MHz ( period = 19.400 ns ) ; register4bits:inst4|inst17 ; register4bits:inst1|inst14 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 15.400 ns               ;
+; N/A   ; 51.55 MHz ( period = 19.400 ns ) ; register4bits:inst3|inst16 ; register4bits:inst1|inst14 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 15.400 ns               ;
+; N/A   ; 51.55 MHz ( period = 19.400 ns ) ; register4bits:inst3|inst17 ; register4bits:inst1|inst14 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 15.400 ns               ;
+; N/A   ; 53.76 MHz ( period = 18.600 ns ) ; register4bits:inst|inst16  ; register4bits:inst1|inst15 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 14.600 ns               ;
+; N/A   ; 53.76 MHz ( period = 18.600 ns ) ; register4bits:inst|inst17  ; register4bits:inst1|inst15 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 14.600 ns               ;
+; N/A   ; 53.76 MHz ( period = 18.600 ns ) ; register4bits:inst4|inst16 ; register4bits:inst1|inst15 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 14.600 ns               ;
+; N/A   ; 53.76 MHz ( period = 18.600 ns ) ; register4bits:inst4|inst17 ; register4bits:inst1|inst15 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 14.600 ns               ;
+; N/A   ; 53.76 MHz ( period = 18.600 ns ) ; register4bits:inst3|inst15 ; register4bits:inst1|inst15 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 14.600 ns               ;
+; N/A   ; 53.76 MHz ( period = 18.600 ns ) ; register4bits:inst3|inst16 ; register4bits:inst1|inst15 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 14.600 ns               ;
+; N/A   ; 53.76 MHz ( period = 18.600 ns ) ; register4bits:inst3|inst17 ; register4bits:inst1|inst15 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 14.600 ns               ;
+; N/A   ; 53.76 MHz ( period = 18.600 ns ) ; register4bits:inst|inst16  ; register4bits:inst2|inst14 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 14.600 ns               ;
+; N/A   ; 53.76 MHz ( period = 18.600 ns ) ; register4bits:inst|inst17  ; register4bits:inst2|inst14 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 14.600 ns               ;
+; N/A   ; 53.76 MHz ( period = 18.600 ns ) ; register4bits:inst4|inst16 ; register4bits:inst2|inst14 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 14.600 ns               ;
+; N/A   ; 53.76 MHz ( period = 18.600 ns ) ; register4bits:inst4|inst17 ; register4bits:inst2|inst14 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 14.600 ns               ;
+; N/A   ; 53.76 MHz ( period = 18.600 ns ) ; register4bits:inst3|inst15 ; register4bits:inst2|inst14 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 14.600 ns               ;
+; N/A   ; 53.76 MHz ( period = 18.600 ns ) ; register4bits:inst3|inst16 ; register4bits:inst2|inst14 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 14.600 ns               ;
+; N/A   ; 53.76 MHz ( period = 18.600 ns ) ; register4bits:inst3|inst17 ; register4bits:inst2|inst14 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 14.600 ns               ;
+; N/A   ; 55.56 MHz ( period = 18.000 ns ) ; register4bits:inst3|inst14 ; register4bits:inst1|inst16 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 14.000 ns               ;
+; N/A   ; 56.18 MHz ( period = 17.800 ns ) ; register4bits:inst|inst16  ; register4bits:inst1|inst17 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 13.800 ns               ;
+; N/A   ; 56.18 MHz ( period = 17.800 ns ) ; register4bits:inst|inst17  ; register4bits:inst1|inst17 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 13.800 ns               ;
+; N/A   ; 56.18 MHz ( period = 17.800 ns ) ; register4bits:inst4|inst16 ; register4bits:inst1|inst17 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 13.800 ns               ;
+; N/A   ; 56.18 MHz ( period = 17.800 ns ) ; register4bits:inst4|inst17 ; register4bits:inst1|inst17 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 13.800 ns               ;
+; N/A   ; 56.18 MHz ( period = 17.800 ns ) ; register4bits:inst3|inst15 ; register4bits:inst1|inst17 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 13.800 ns               ;
+; N/A   ; 56.18 MHz ( period = 17.800 ns ) ; register4bits:inst3|inst16 ; register4bits:inst1|inst17 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 13.800 ns               ;
+; N/A   ; 56.18 MHz ( period = 17.800 ns ) ; register4bits:inst3|inst17 ; register4bits:inst1|inst17 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 13.800 ns               ;
+; N/A   ; 64.94 MHz ( period = 15.400 ns ) ; register4bits:inst|inst15  ; register4bits:inst2|inst15 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 11.400 ns               ;
+; N/A   ; 64.94 MHz ( period = 15.400 ns ) ; register4bits:inst|inst16  ; register4bits:inst2|inst15 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 11.400 ns               ;
+; N/A   ; 64.94 MHz ( period = 15.400 ns ) ; register4bits:inst|inst17  ; register4bits:inst2|inst15 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 11.400 ns               ;
+; N/A   ; 64.94 MHz ( period = 15.400 ns ) ; register4bits:inst4|inst16 ; register4bits:inst2|inst15 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 11.400 ns               ;
+; N/A   ; 64.94 MHz ( period = 15.400 ns ) ; register4bits:inst4|inst17 ; register4bits:inst2|inst15 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 11.400 ns               ;
+; N/A   ; 64.94 MHz ( period = 15.400 ns ) ; register4bits:inst3|inst16 ; register4bits:inst2|inst15 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 11.400 ns               ;
+; N/A   ; 64.94 MHz ( period = 15.400 ns ) ; register4bits:inst3|inst17 ; register4bits:inst2|inst15 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 11.400 ns               ;
+; N/A   ; 64.94 MHz ( period = 15.400 ns ) ; register4bits:inst|inst15  ; register4bits:inst1|inst15 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 11.400 ns               ;
+; N/A   ; 64.94 MHz ( period = 15.400 ns ) ; register4bits:inst4|inst15 ; register4bits:inst1|inst15 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 11.400 ns               ;
+; N/A   ; 64.94 MHz ( period = 15.400 ns ) ; register4bits:inst|inst15  ; register4bits:inst2|inst14 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 11.400 ns               ;
+; N/A   ; 64.94 MHz ( period = 15.400 ns ) ; register4bits:inst4|inst15 ; register4bits:inst2|inst14 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 11.400 ns               ;
+; N/A   ; 68.49 MHz ( period = 14.600 ns ) ; register4bits:inst|inst14  ; register4bits:inst2|inst15 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 10.600 ns               ;
+; N/A   ; 68.49 MHz ( period = 14.600 ns ) ; register4bits:inst4|inst14 ; register4bits:inst2|inst15 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 10.600 ns               ;
+; N/A   ; 68.49 MHz ( period = 14.600 ns ) ; register4bits:inst4|inst15 ; register4bits:inst2|inst15 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 10.600 ns               ;
+; N/A   ; 68.49 MHz ( period = 14.600 ns ) ; register4bits:inst3|inst15 ; register4bits:inst2|inst15 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 10.600 ns               ;
+; N/A   ; 68.49 MHz ( period = 14.600 ns ) ; register4bits:inst|inst15  ; register4bits:inst1|inst17 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 10.600 ns               ;
+; N/A   ; 68.49 MHz ( period = 14.600 ns ) ; register4bits:inst4|inst15 ; register4bits:inst1|inst17 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 10.600 ns               ;
+; N/A   ; 72.46 MHz ( period = 13.800 ns ) ; register4bits:inst4|inst14 ; register4bits:inst1|inst15 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 9.800 ns                ;
+; N/A   ; 72.46 MHz ( period = 13.800 ns ) ; register4bits:inst3|inst14 ; register4bits:inst1|inst15 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 9.800 ns                ;
+; N/A   ; 72.46 MHz ( period = 13.800 ns ) ; register4bits:inst4|inst14 ; register4bits:inst2|inst14 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 9.800 ns                ;
+; N/A   ; 72.46 MHz ( period = 13.800 ns ) ; register4bits:inst3|inst14 ; register4bits:inst2|inst14 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 9.800 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; register4bits:inst|inst14  ; register4bits:inst2|inst16 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 9.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; register4bits:inst|inst15  ; register4bits:inst2|inst16 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 9.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; register4bits:inst|inst16  ; register4bits:inst2|inst16 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 9.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; register4bits:inst|inst17  ; register4bits:inst2|inst16 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 9.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; register4bits:inst4|inst15 ; register4bits:inst2|inst16 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 9.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; register4bits:inst4|inst16 ; register4bits:inst2|inst16 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 9.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; register4bits:inst4|inst17 ; register4bits:inst2|inst16 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 9.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; register4bits:inst3|inst16 ; register4bits:inst2|inst16 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 9.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; register4bits:inst3|inst17 ; register4bits:inst2|inst16 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 9.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; register4bits:inst4|inst14 ; register4bits:inst1|inst17 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 9.000 ns                ;
+; N/A   ; 76.92 MHz ( period = 13.000 ns ) ; register4bits:inst3|inst14 ; register4bits:inst1|inst17 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 9.000 ns                ;
+; N/A   ; 78.13 MHz ( period = 12.800 ns ) ; register4bits:inst4|inst14 ; register4bits:inst1|inst14 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 8.800 ns                ;
+; N/A   ; 78.13 MHz ( period = 12.800 ns ) ; register4bits:inst4|inst15 ; register4bits:inst1|inst14 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 8.800 ns                ;
+; N/A   ; 78.13 MHz ( period = 12.800 ns ) ; register4bits:inst3|inst14 ; register4bits:inst1|inst14 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 8.800 ns                ;
+; N/A   ; 78.13 MHz ( period = 12.800 ns ) ; register4bits:inst3|inst15 ; register4bits:inst1|inst14 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 8.800 ns                ;
+; N/A   ; 104.17 MHz ( period = 9.600 ns ) ; register4bits:inst|inst14  ; register4bits:inst2|inst17 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 104.17 MHz ( period = 9.600 ns ) ; register4bits:inst|inst15  ; register4bits:inst2|inst17 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 104.17 MHz ( period = 9.600 ns ) ; register4bits:inst|inst16  ; register4bits:inst2|inst17 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 104.17 MHz ( period = 9.600 ns ) ; register4bits:inst|inst17  ; register4bits:inst2|inst17 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 104.17 MHz ( period = 9.600 ns ) ; register4bits:inst4|inst17 ; register4bits:inst2|inst17 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 104.17 MHz ( period = 9.600 ns ) ; register4bits:inst3|inst17 ; register4bits:inst2|inst17 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 5.600 ns                ;
+; N/A   ; 113.64 MHz ( period = 8.800 ns ) ; register4bits:inst|inst14  ; register4bits:inst1|inst14 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 4.800 ns                ;
+; N/A   ; 113.64 MHz ( period = 8.800 ns ) ; register4bits:inst|inst14  ; register4bits:inst1|inst15 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 4.800 ns                ;
+; N/A   ; 113.64 MHz ( period = 8.800 ns ) ; register4bits:inst|inst14  ; register4bits:inst2|inst14 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 4.800 ns                ;
+; N/A   ; 113.64 MHz ( period = 8.800 ns ) ; register4bits:inst|inst14  ; register4bits:inst1|inst17 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 4.800 ns                ;
+; N/A   ; 125.00 MHz ( period = 8.000 ns ) ; register4bits:inst4|inst16 ; register4bits:inst2|inst17 ; CLOCK      ; CLOCK    ; None                        ; None                      ; 4.000 ns                ;
++-------+----------------------------------+----------------------------+----------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++----------------------------------------------------------------------------------+
+; tsu                                                                              ;
++-------+--------------+------------+------+----------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From ; To                         ; To Clock ;
++-------+--------------+------------+------+----------------------------+----------+
+; N/A   ; None         ; 6.000 ns   ; B0   ; register4bits:inst3|inst17 ; CLOCK    ;
+; N/A   ; None         ; 6.000 ns   ; B1   ; register4bits:inst3|inst16 ; CLOCK    ;
+; N/A   ; None         ; 6.000 ns   ; B2   ; register4bits:inst3|inst15 ; CLOCK    ;
+; N/A   ; None         ; 6.000 ns   ; B3   ; register4bits:inst3|inst14 ; CLOCK    ;
+; N/A   ; None         ; 6.000 ns   ; A0   ; register4bits:inst4|inst17 ; CLOCK    ;
+; N/A   ; None         ; 6.000 ns   ; A1   ; register4bits:inst4|inst16 ; CLOCK    ;
+; N/A   ; None         ; 6.000 ns   ; A2   ; register4bits:inst4|inst15 ; CLOCK    ;
+; N/A   ; None         ; 6.000 ns   ; A3   ; register4bits:inst4|inst14 ; CLOCK    ;
+; N/A   ; None         ; 6.000 ns   ; S0   ; register4bits:inst|inst17  ; CLOCK    ;
+; N/A   ; None         ; 6.000 ns   ; S1   ; register4bits:inst|inst16  ; CLOCK    ;
+; N/A   ; None         ; 6.000 ns   ; S2   ; register4bits:inst|inst15  ; CLOCK    ;
+; N/A   ; None         ; 6.000 ns   ; S3   ; register4bits:inst|inst14  ; CLOCK    ;
++-------+--------------+------------+------+----------------------------+----------+
+
+
++----------------------------------------------------------------------------------+
+; tco                                                                              ;
++-------+--------------+------------+----------------------------+----+------------+
+; Slack ; Required tco ; Actual tco ; From                       ; To ; From Clock ;
++-------+--------------+------------+----------------------------+----+------------+
+; N/A   ; None         ; 4.500 ns   ; register4bits:inst1|inst17 ; V  ; CLOCK      ;
+; N/A   ; None         ; 4.500 ns   ; register4bits:inst1|inst16 ; Z  ; CLOCK      ;
+; N/A   ; None         ; 4.500 ns   ; register4bits:inst2|inst14 ; C3 ; CLOCK      ;
+; N/A   ; None         ; 4.500 ns   ; register4bits:inst1|inst15 ; S  ; CLOCK      ;
+; N/A   ; None         ; 4.500 ns   ; register4bits:inst1|inst14 ; Cy ; CLOCK      ;
+; N/A   ; None         ; 4.500 ns   ; register4bits:inst2|inst15 ; C2 ; CLOCK      ;
+; N/A   ; None         ; 4.500 ns   ; register4bits:inst2|inst16 ; C1 ; CLOCK      ;
+; N/A   ; None         ; 4.500 ns   ; register4bits:inst2|inst17 ; C0 ; CLOCK      ;
++-------+--------------+------------+----------------------------+----+------------+
+
+
++----------------------------------------------------------------------------------------+
+; th                                                                                     ;
++---------------+-------------+-----------+------+----------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From ; To                         ; To Clock ;
++---------------+-------------+-----------+------+----------------------------+----------+
+; N/A           ; None        ; -1.000 ns ; B0   ; register4bits:inst3|inst17 ; CLOCK    ;
+; N/A           ; None        ; -1.000 ns ; B1   ; register4bits:inst3|inst16 ; CLOCK    ;
+; N/A           ; None        ; -1.000 ns ; B2   ; register4bits:inst3|inst15 ; CLOCK    ;
+; N/A           ; None        ; -1.000 ns ; B3   ; register4bits:inst3|inst14 ; CLOCK    ;
+; N/A           ; None        ; -1.000 ns ; A0   ; register4bits:inst4|inst17 ; CLOCK    ;
+; N/A           ; None        ; -1.000 ns ; A1   ; register4bits:inst4|inst16 ; CLOCK    ;
+; N/A           ; None        ; -1.000 ns ; A2   ; register4bits:inst4|inst15 ; CLOCK    ;
+; N/A           ; None        ; -1.000 ns ; A3   ; register4bits:inst4|inst14 ; CLOCK    ;
+; N/A           ; None        ; -1.000 ns ; S0   ; register4bits:inst|inst17  ; CLOCK    ;
+; N/A           ; None        ; -1.000 ns ; S1   ; register4bits:inst|inst16  ; CLOCK    ;
+; N/A           ; None        ; -1.000 ns ; S2   ; register4bits:inst|inst15  ; CLOCK    ;
+; N/A           ; None        ; -1.000 ns ; S3   ; register4bits:inst|inst14  ; CLOCK    ;
++---------------+-------------+-----------+------+----------------------------+----------+
 
 
 +--------------------------+
@@ -144,25 +258,72 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Oct 23 14:06:31 2014
+    Info: Processing started: Thu Oct 30 14:18:07 2014
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off Lab3 -c Lab3
 Info: Started post-fitting delay annotation
 Info: Delay annotation completed successfully
 Warning: Timing Analysis does not support the analysis of latches as synchronous elements for the currently selected device family
-Info: Longest tpd from source pin "S1" to destination pin "Carry_out" is 14.900 ns
-    Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_6; Fanout = 91; PIN Node = 'S1'
-    Info: 2: + IC(1.000 ns) + CELL(3.000 ns) = 4.500 ns; Loc. = LC17; Fanout = 1; COMB Node = 'fulladder1bit:inst|inst4~6'
-    Info: 3: + IC(0.000 ns) + CELL(0.800 ns) = 5.300 ns; Loc. = LC18; Fanout = 1; COMB Node = 'fulladder1bit:inst|inst4~12'
-    Info: 4: + IC(0.000 ns) + CELL(1.800 ns) = 7.100 ns; Loc. = LC19; Fanout = 5; COMB Node = 'fulladder1bit:inst|inst4~5'
-    Info: 5: + IC(1.000 ns) + CELL(3.000 ns) = 11.100 ns; Loc. = LC4; Fanout = 1; COMB Node = 'fulladder1bit:inst5|inst4~9'
-    Info: 6: + IC(0.000 ns) + CELL(1.800 ns) = 12.900 ns; Loc. = LC5; Fanout = 1; COMB Node = 'fulladder1bit:inst5|inst4~5'
-    Info: 7: + IC(0.000 ns) + CELL(2.000 ns) = 14.900 ns; Loc. = PIN_17; Fanout = 0; PIN Node = 'Carry_out'
-    Info: Total cell delay = 12.900 ns ( 86.58 % )
-    Info: Total interconnect delay = 2.000 ns ( 13.42 % )
-Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 165 megabytes
-    Info: Processing ended: Thu Oct 23 14:06:32 2014
-    Info: Elapsed time: 00:00:01
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "CLOCK" is an undefined clock
+Info: Clock "CLOCK" has Internal fmax of 47.17 MHz between source register "register4bits:inst|inst15" and destination register "register4bits:inst1|inst16" (period= 21.2 ns)
+    Info: + Longest register to register delay is 17.200 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC49; Fanout = 167; REG Node = 'register4bits:inst|inst15'
+        Info: 2: + IC(1.000 ns) + CELL(3.000 ns) = 4.000 ns; Loc. = LC17; Fanout = 1; COMB Node = 'arithcircuit4bits:inst12|fulladder1bit:inst|inst4~6'
+        Info: 3: + IC(0.000 ns) + CELL(0.800 ns) = 4.800 ns; Loc. = LC18; Fanout = 1; COMB Node = 'arithcircuit4bits:inst12|fulladder1bit:inst|inst4~12'
+        Info: 4: + IC(0.000 ns) + CELL(1.800 ns) = 6.600 ns; Loc. = LC19; Fanout = 27; COMB Node = 'arithcircuit4bits:inst12|fulladder1bit:inst|inst4~5'
+        Info: 5: + IC(1.000 ns) + CELL(3.000 ns) = 10.600 ns; Loc. = LC97; Fanout = 1; COMB Node = '74257:inst11|21~33'
+        Info: 6: + IC(0.000 ns) + CELL(0.800 ns) = 11.400 ns; Loc. = LC98; Fanout = 1; COMB Node = '74257:inst11|21~37'
+        Info: 7: + IC(0.000 ns) + CELL(1.800 ns) = 13.200 ns; Loc. = LC99; Fanout = 2; COMB Node = '74257:inst11|21~22'
+        Info: 8: + IC(1.000 ns) + CELL(3.000 ns) = 17.200 ns; Loc. = LC118; Fanout = 1; REG Node = 'register4bits:inst1|inst16'
+        Info: Total cell delay = 14.200 ns ( 82.56 % )
+        Info: Total interconnect delay = 3.000 ns ( 17.44 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "CLOCK" to destination register is 1.500 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.500 ns) = 1.500 ns; Loc. = PIN_83; Fanout = 20; CLK Node = 'CLOCK'
+            Info: 2: + IC(0.000 ns) + CELL(0.000 ns) = 1.500 ns; Loc. = LC118; Fanout = 1; REG Node = 'register4bits:inst1|inst16'
+            Info: Total cell delay = 1.500 ns ( 100.00 % )
+        Info: - Longest clock path from clock "CLOCK" to source register is 1.500 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.500 ns) = 1.500 ns; Loc. = PIN_83; Fanout = 20; CLK Node = 'CLOCK'
+            Info: 2: + IC(0.000 ns) + CELL(0.000 ns) = 1.500 ns; Loc. = LC49; Fanout = 167; REG Node = 'register4bits:inst|inst15'
+            Info: Total cell delay = 1.500 ns ( 100.00 % )
+    Info: + Micro clock to output delay of source is 1.000 ns
+    Info: + Micro setup delay of destination is 3.000 ns
+Info: tsu for register "register4bits:inst3|inst17" (data pin = "B0", clock pin = "CLOCK") is 6.000 ns
+    Info: + Longest pin to register delay is 4.500 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_36; Fanout = 1; PIN Node = 'B0'
+        Info: 2: + IC(1.000 ns) + CELL(3.000 ns) = 4.500 ns; Loc. = LC27; Fanout = 59; REG Node = 'register4bits:inst3|inst17'
+        Info: Total cell delay = 3.500 ns ( 77.78 % )
+        Info: Total interconnect delay = 1.000 ns ( 22.22 % )
+    Info: + Micro setup delay of destination is 3.000 ns
+    Info: - Shortest clock path from clock "CLOCK" to destination register is 1.500 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.500 ns) = 1.500 ns; Loc. = PIN_83; Fanout = 20; CLK Node = 'CLOCK'
+        Info: 2: + IC(0.000 ns) + CELL(0.000 ns) = 1.500 ns; Loc. = LC27; Fanout = 59; REG Node = 'register4bits:inst3|inst17'
+        Info: Total cell delay = 1.500 ns ( 100.00 % )
+Info: tco from clock "CLOCK" to destination pin "V" through register "register4bits:inst1|inst17" is 4.500 ns
+    Info: + Longest clock path from clock "CLOCK" to source register is 1.500 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.500 ns) = 1.500 ns; Loc. = PIN_83; Fanout = 20; CLK Node = 'CLOCK'
+        Info: 2: + IC(0.000 ns) + CELL(0.000 ns) = 1.500 ns; Loc. = LC101; Fanout = 1; REG Node = 'register4bits:inst1|inst17'
+        Info: Total cell delay = 1.500 ns ( 100.00 % )
+    Info: + Micro clock to output delay of source is 1.000 ns
+    Info: + Longest register to pin delay is 2.000 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC101; Fanout = 1; REG Node = 'register4bits:inst1|inst17'
+        Info: 2: + IC(0.000 ns) + CELL(2.000 ns) = 2.000 ns; Loc. = PIN_65; Fanout = 0; PIN Node = 'V'
+        Info: Total cell delay = 2.000 ns ( 100.00 % )
+Info: th for register "register4bits:inst3|inst17" (data pin = "B0", clock pin = "CLOCK") is -1.000 ns
+    Info: + Longest clock path from clock "CLOCK" to destination register is 1.500 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.500 ns) = 1.500 ns; Loc. = PIN_83; Fanout = 20; CLK Node = 'CLOCK'
+        Info: 2: + IC(0.000 ns) + CELL(0.000 ns) = 1.500 ns; Loc. = LC27; Fanout = 59; REG Node = 'register4bits:inst3|inst17'
+        Info: Total cell delay = 1.500 ns ( 100.00 % )
+    Info: + Micro hold delay of destination is 2.000 ns
+    Info: - Shortest pin to register delay is 4.500 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.500 ns) = 0.500 ns; Loc. = PIN_36; Fanout = 1; PIN Node = 'B0'
+        Info: 2: + IC(1.000 ns) + CELL(3.000 ns) = 4.500 ns; Loc. = LC27; Fanout = 59; REG Node = 'register4bits:inst3|inst17'
+        Info: Total cell delay = 3.500 ns ( 77.78 % )
+        Info: Total interconnect delay = 1.000 ns ( 22.22 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 166 megabytes
+    Info: Processing ended: Thu Oct 30 14:18:09 2014
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:00
 
 

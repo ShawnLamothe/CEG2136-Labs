@@ -61,7 +61,7 @@
  ---------------------------------------------------------------------------------
 
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-CHIP  "Lab3"  ASSIGNED TO AN: EPM7064SLC84-7
+CHIP  "Lab3"  ASSIGNED TO AN: EPM7128SLC84-7
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
@@ -70,7 +70,7 @@ GND+                         : 2         :        :                   :         
 VCCINT                       : 3         : power  :                   : 5.0V    :           :                
 RESERVED                     : 4         :        :                   :         :           :                
 RESERVED                     : 5         :        :                   :         :           :                
-S1                           : 6         : input  : TTL               :         :           : N              
+RESERVED                     : 6         :        :                   :         :           :                
 GND                          : 7         : gnd    :                   :         :           :                
 RESERVED                     : 8         :        :                   :         :           :                
 RESERVED                     : 9         :        :                   :         :           :                
@@ -79,28 +79,28 @@ RESERVED                     : 11        :        :                   :         
 RESERVED                     : 12        :        :                   :         :           :                
 VCCIO                        : 13        : power  :                   : 5.0V    :           :                
 TDI                          : 14        : input  : TTL               :         :           : N              
-C3                           : 15        : output : TTL               :         :           : N              
-B1                           : 16        : input  : TTL               :         :           : N              
-Carry_out                    : 17        : output : TTL               :         :           : N              
+RESERVED                     : 15        :        :                   :         :           :                
+RESERVED                     : 16        :        :                   :         :           :                
+RESERVED                     : 17        :        :                   :         :           :                
 RESERVED                     : 18        :        :                   :         :           :                
 GND                          : 19        : gnd    :                   :         :           :                
-RESERVED                     : 20        :        :                   :         :           :                
-C0                           : 21        : output : TTL               :         :           : N              
+CLEAR                        : 20        : input  : TTL               :         :           : Y              
+RESERVED                     : 21        :        :                   :         :           :                
 RESERVED                     : 22        :        :                   :         :           :                
 TMS                          : 23        : input  : TTL               :         :           : N              
 RESERVED                     : 24        :        :                   :         :           :                
 RESERVED                     : 25        :        :                   :         :           :                
 VCCIO                        : 26        : power  :                   : 5.0V    :           :                
 RESERVED                     : 27        :        :                   :         :           :                
-RESERVED                     : 28        :        :                   :         :           :                
-RESERVED                     : 29        :        :                   :         :           :                
-RESERVED                     : 30        :        :                   :         :           :                
-RESERVED                     : 31        :        :                   :         :           :                
+A3                           : 28        : input  : TTL               :         :           : Y              
+A2                           : 29        : input  : TTL               :         :           : Y              
+A1                           : 30        : input  : TTL               :         :           : Y              
+A0                           : 31        : input  : TTL               :         :           : Y              
 GND                          : 32        : gnd    :                   :         :           :                
-S0                           : 33        : input  : TTL               :         :           : N              
-C2                           : 34        : output : TTL               :         :           : N              
-B2                           : 35        : input  : TTL               :         :           : N              
-B3                           : 36        : input  : TTL               :         :           : N              
+B3                           : 33        : input  : TTL               :         :           : Y              
+B2                           : 34        : input  : TTL               :         :           : Y              
+B1                           : 35        : input  : TTL               :         :           : Y              
+B0                           : 36        : input  : TTL               :         :           : Y              
 RESERVED                     : 37        :        :                   :         :           :                
 VCCIO                        : 38        : power  :                   : 5.0V    :           :                
 RESERVED                     : 39        :        :                   :         :           :                
@@ -109,13 +109,13 @@ RESERVED                     : 41        :        :                   :         
 GND                          : 42        : gnd    :                   :         :           :                
 VCCINT                       : 43        : power  :                   : 5.0V    :           :                
 RESERVED                     : 44        :        :                   :         :           :                
-C1                           : 45        : output : TTL               :         :           : N              
+RESERVED                     : 45        :        :                   :         :           :                
 RESERVED                     : 46        :        :                   :         :           :                
 GND                          : 47        : gnd    :                   :         :           :                
-RESERVED                     : 48        :        :                   :         :           :                
-A1                           : 49        : input  : TTL               :         :           : N              
-A0                           : 50        : input  : TTL               :         :           : N              
-B0                           : 51        : input  : TTL               :         :           : N              
+S3                           : 48        : input  : TTL               :         :           : Y              
+S2                           : 49        : input  : TTL               :         :           : Y              
+S1                           : 50        : input  : TTL               :         :           : Y              
+S0                           : 51        : input  : TTL               :         :           : Y              
 RESERVED                     : 52        :        :                   :         :           :                
 VCCIO                        : 53        : power  :                   : 5.0V    :           :                
 RESERVED                     : 54        :        :                   :         :           :                
@@ -125,21 +125,21 @@ RESERVED                     : 57        :        :                   :         
 RESERVED                     : 58        :        :                   :         :           :                
 GND                          : 59        : gnd    :                   :         :           :                
 RESERVED                     : 60        :        :                   :         :           :                
-S2                           : 61        : input  : TTL               :         :           : N              
+RESERVED                     : 61        :        :                   :         :           :                
 TCK                          : 62        : input  : TTL               :         :           : N              
 RESERVED                     : 63        :        :                   :         :           :                
 RESERVED                     : 64        :        :                   :         :           :                
-RESERVED                     : 65        :        :                   :         :           :                
+V                            : 65        : output : TTL               :         :           : Y              
 VCCIO                        : 66        : power  :                   : 5.0V    :           :                
-RESERVED                     : 67        :        :                   :         :           :                
-RESERVED                     : 68        :        :                   :         :           :                
-A3                           : 69        : input  : TTL               :         :           : N              
-A2                           : 70        : input  : TTL               :         :           : N              
+C0                           : 67        : output : TTL               :         :           : Y              
+C1                           : 68        : output : TTL               :         :           : Y              
+C2                           : 69        : output : TTL               :         :           : Y              
+C3                           : 70        : output : TTL               :         :           : Y              
 TDO                          : 71        : output : TTL               :         :           : N              
 GND                          : 72        : gnd    :                   :         :           :                
-RESERVED                     : 73        :        :                   :         :           :                
-RESERVED                     : 74        :        :                   :         :           :                
-RESERVED                     : 75        :        :                   :         :           :                
+S                            : 73        : output : TTL               :         :           : Y              
+Cy                           : 74        : output : TTL               :         :           : Y              
+Z                            : 75        : output : TTL               :         :           : Y              
 RESERVED                     : 76        :        :                   :         :           :                
 RESERVED                     : 77        :        :                   :         :           :                
 VCCIO                        : 78        : power  :                   : 5.0V    :           :                
@@ -147,5 +147,5 @@ RESERVED                     : 79        :        :                   :         
 RESERVED                     : 80        :        :                   :         :           :                
 RESERVED                     : 81        :        :                   :         :           :                
 GND                          : 82        : gnd    :                   :         :           :                
-GND+                         : 83        :        :                   :         :           :                
+CLOCK                        : 83        : input  : TTL               :         :           : Y              
 GND+                         : 84        :        :                   :         :           :                

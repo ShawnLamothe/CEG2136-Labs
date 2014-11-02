@@ -1,6 +1,6 @@
 Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 32
-1901
+1912
 OFF
 OFF
 OFF
@@ -36,23 +36,6 @@ AUTO
 
 # end
 # entity
-state4bits
-# storage
-db|Lab3.(2).cnf
-db|Lab3.(2).cnf
-# case_insensitive
-# source_file
-state4bits.bdf
-ae86ce837187d6af2027ac80b0a0207c
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# macro_sequence
-
-# end
-# entity
 74257
 # storage
 db|Lab3.(4).cnf
@@ -65,6 +48,9 @@ q:|altera.09|altera|90sp2|quartus|libraries|others|maxplus2|74257.bdf
 # internal_option {
 BLOCK_DESIGN_NAMING
 AUTO
+}
+# hierarchies {
+74257:inst11
 }
 # macro_sequence
 
@@ -84,27 +70,10 @@ BLOCK_DESIGN_NAMING
 AUTO
 }
 # hierarchies {
-74153:inst36
-74153:inst23
-74153:inst24
-74153:inst25
-}
-# macro_sequence
-
-# end
-# entity
-logiccircuit4bit
-# storage
-db|Lab3.(8).cnf
-db|Lab3.(8).cnf
-# case_insensitive
-# source_file
-logiccircuit4bit.bdf
-7414c598a8532ea4838eaac123e160eb
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
+arithcircuit4bits:inst12|74153:inst36
+arithcircuit4bits:inst12|74153:inst23
+arithcircuit4bits:inst12|74153:inst24
+arithcircuit4bits:inst12|74153:inst25
 }
 # macro_sequence
 
@@ -186,6 +155,12 @@ D1
 q:|altera.09|altera|90sp2|quartus|libraries|megafunctions|aglobal.inc
 99832fdf63412df51d7531202d74e75
 }
+# hierarchies {
+logiccircuit4bit:inst6|logiccircuit1bit:inst|81mux:inst
+logiccircuit4bit:inst6|logiccircuit1bit:inst1|81mux:inst
+logiccircuit4bit:inst6|logiccircuit1bit:inst2|81mux:inst
+logiccircuit4bit:inst6|logiccircuit1bit:inst3|81mux:inst
+}
 # macro_sequence
 
 # end
@@ -202,6 +177,12 @@ b1e05adc35b01ffca73a9fee76ba5bf1
 # internal_option {
 BLOCK_DESIGN_NAMING
 AUTO
+}
+# hierarchies {
+logiccircuit4bit:inst6|logiccircuit1bit:inst|81mux:inst|p81mux:sub
+logiccircuit4bit:inst6|logiccircuit1bit:inst1|81mux:inst|p81mux:sub
+logiccircuit4bit:inst6|logiccircuit1bit:inst2|81mux:inst|p81mux:sub
+logiccircuit4bit:inst6|logiccircuit1bit:inst3|81mux:inst|p81mux:sub
 }
 # macro_sequence
 
@@ -221,10 +202,10 @@ BLOCK_DESIGN_NAMING
 AUTO
 }
 # hierarchies {
-fulladder1bit:inst5
-fulladder1bit:inst4
-fulladder1bit:inst
-fulladder1bit:inst6
+arithcircuit4bits:inst12|fulladder1bit:inst5
+arithcircuit4bits:inst12|fulladder1bit:inst4
+arithcircuit4bits:inst12|fulladder1bit:inst
+arithcircuit4bits:inst12|fulladder1bit:inst6
 }
 # macro_sequence
 
@@ -243,18 +224,25 @@ ef366a4e7086d1f77260eb45809ecf79
 BLOCK_DESIGN_NAMING
 AUTO
 }
+# hierarchies {
+register4bits:inst1
+register4bits:inst
+register4bits:inst4
+register4bits:inst3
+register4bits:inst2
+}
 # macro_sequence
 
 # end
 # entity
-logiccircuit1bit
+arith_test
 # storage
-db|Lab3.(5).cnf
-db|Lab3.(5).cnf
+db|Lab3.(9).cnf
+db|Lab3.(9).cnf
 # case_insensitive
 # source_file
-logiccircuit1bit.bdf
-912a32937538a94a82693cb95552a31
+arith_test.bdf
+6a3626f47f1a448eaffe3682c75ee47
 26
 # internal_option {
 BLOCK_DESIGN_NAMING
@@ -264,14 +252,57 @@ AUTO
 
 # end
 # entity
-arithcircuit4bits
+logiccircuit1bit
 # storage
-db|Lab3.(9).cnf
-db|Lab3.(9).cnf
+db|Lab3.(0).cnf
+db|Lab3.(0).cnf
 # case_insensitive
 # source_file
-arithcircuit4bits.bdf
-4f6e6d6d6b3a6422da1ec72ab3138d3
+logiccircuit1bit.bdf
+81f0976fc1ee958db91579a04e271128
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+logiccircuit4bit:inst6|logiccircuit1bit:inst
+logiccircuit4bit:inst6|logiccircuit1bit:inst1
+logiccircuit4bit:inst6|logiccircuit1bit:inst2
+logiccircuit4bit:inst6|logiccircuit1bit:inst3
+}
+# macro_sequence
+
+# end
+# entity
+logiccircuit4bit
+# storage
+db|Lab3.(5).cnf
+db|Lab3.(5).cnf
+# case_insensitive
+# source_file
+logiccircuit4bit.bdf
+13e7a7da5d8a67efc88112afa7385558
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+logiccircuit4bit:inst6
+}
+# macro_sequence
+
+# end
+# entity
+lab3top
+# storage
+db|Lab3.(2).cnf
+db|Lab3.(2).cnf
+# case_insensitive
+# source_file
+lab3top.bdf
+7680d249fa143989879cfd4f6132842
 26
 # internal_option {
 BLOCK_DESIGN_NAMING
@@ -284,18 +315,41 @@ AUTO
 
 # end
 # entity
-lab3top
+state4bits
 # storage
-db|Lab3.(0).cnf
-db|Lab3.(0).cnf
+db|Lab3.(8).cnf
+db|Lab3.(8).cnf
 # case_insensitive
 # source_file
-lab3top.bdf
-e81810801c4a48e444d389f135f122e
+state4bits.bdf
+ba6081fdb785ec3f57fdb2a96c3a1a2
 26
 # internal_option {
 BLOCK_DESIGN_NAMING
 AUTO
+}
+# hierarchies {
+state4bits:inst14
+}
+# macro_sequence
+
+# end
+# entity
+arithcircuit4bits
+# storage
+db|Lab3.(12).cnf
+db|Lab3.(12).cnf
+# case_insensitive
+# source_file
+arithcircuit4bits.bdf
+9233c91f2ffff1b377f554631b1a21a
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+arithcircuit4bits:inst12
 }
 # macro_sequence
 

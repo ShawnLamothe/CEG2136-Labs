@@ -1,5 +1,5 @@
 Flow report for Lab3
-Thu Oct 23 14:06:32 2014
+Thu Oct 30 14:18:08 2014
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -38,16 +38,16 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Flow Summary                                                           ;
 +-------------------------+----------------------------------------------+
-; Flow Status             ; Successful - Thu Oct 23 14:06:32 2014        ;
+; Flow Status             ; Successful - Thu Oct 30 14:18:08 2014        ;
 ; Quartus II Version      ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name           ; Lab3                                         ;
-; Top-level Entity Name   ; arithcircuit4bits                            ;
+; Top-level Entity Name   ; lab3top                                      ;
 ; Family                  ; MAX7000S                                     ;
-; Device                  ; EPM7064SLC84-7                               ;
+; Device                  ; EPM7128SLC84-7                               ;
 ; Timing Models           ; Final                                        ;
 ; Met timing requirements ; Yes                                          ;
-; Total macrocells        ; 23 / 64 ( 36 % )                             ;
-; Total pins              ; 20 / 68 ( 29 % )                             ;
+; Total macrocells        ; 64 / 128 ( 50 % )                            ;
+; Total pins              ; 26 / 68 ( 38 % )                             ;
 +-------------------------+----------------------------------------------+
 
 
@@ -56,7 +56,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/23/2014 14:06:19 ;
+; Start date & time ; 10/30/2014 14:17:56 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab3                ;
 +-------------------+---------------------+
@@ -67,10 +67,9 @@ applicable agreement for further details.
 +------------------------------------+------------------------------+---------------+-------------+----------------+
 ; Assignment Name                    ; Value                        ; Default Value ; Entity Name ; Section Id     ;
 +------------------------------------+------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 158513290137.141408757805032 ; --            ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP             ; 85                           ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP             ; 0                            ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                   ; arithcircuit4bits            ; Lab3          ; --          ; --             ;
+; COMPILER_SIGNATURE_ID              ; 158513290137.141469307502412 ; --            ; --          ; --             ;
+; MISC_FILE                          ; E:/CEG2136 Lab3/Lab3.dpf     ; --            ; --          ; --             ;
+; TOP_LEVEL_ENTITY                   ; lab3top                      ; Lab3          ; --          ; --             ;
 ; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                          ; --            ; --          ; eda_blast_fpga ;
 +------------------------------------+------------------------------+---------------+-------------+----------------+
 
@@ -80,11 +79,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:05     ; 1.0                     ; 201 MB              ; 00:00:03                           ;
-; Fitter                  ; 00:00:01     ; 1.0                     ; 178 MB              ; 00:00:00                           ;
+; Analysis & Synthesis    ; 00:00:07     ; 1.0                     ; 203 MB              ; 00:00:05                           ;
+; Fitter                  ; 00:00:01     ; 1.0                     ; 181 MB              ; 00:00:01                           ;
 ; Assembler               ; 00:00:01     ; 1.0                     ; 179 MB              ; 00:00:00                           ;
 ; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 154 MB              ; 00:00:00                           ;
-; Total                   ; 00:00:08     ; --                      ; --                  ; 00:00:03                           ;
+; Total                   ; 00:00:10     ; --                      ; --                  ; 00:00:06                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

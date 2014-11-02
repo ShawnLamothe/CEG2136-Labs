@@ -20,6 +20,701 @@ Altera or its authorized distributors.  Please refer to the
 applicable agreement for further details.
 */
 
+VECTOR("E:/CEG2136 Lab3/airth_test_outputs.vwf")
+{
+	ZOOM{
+		ZBEGIN = 0;
+		ZEND = 1000000;
+		NUMERATOR = 20;
+		DENOMINATOR = 1000;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 10000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "A3";
+		INDEX = 0;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "A2";
+		INDEX = 1;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "A1";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "A0";
+		INDEX = 3;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "B3";
+		INDEX = 4;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "B2";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "B1";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "B0";
+		INDEX = 7;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "Cin";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "S2";
+		INDEX = 9;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "S1";
+		INDEX = 10;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "S0";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "X3";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "X2";
+		INDEX = 13;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "X1";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "X0";
+		INDEX = 15;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "Y3";
+		INDEX = 16;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "Y2";
+		INDEX = 17;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "Y1";
+		INDEX = 18;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "Y0";
+		INDEX = 19;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
+
+VECTOR("E:/CEG2136 Lab3/airth_test.vwf")
+{
+	ZOOM{
+		ZBEGIN = 0;
+		ZEND = 1000000;
+		NUMERATOR = 20;
+		DENOMINATOR = 1000;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 10000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "A3";
+		INDEX = 0;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "A2";
+		INDEX = 1;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "A1";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "A0";
+		INDEX = 3;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "B3";
+		INDEX = 4;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "B2";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "B1";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "B0";
+		INDEX = 7;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "C3";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "C2";
+		INDEX = 9;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "C1";
+		INDEX = 10;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "C0";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "Carry_out";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "S2";
+		INDEX = 13;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "S1";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "S0";
+		INDEX = 15;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
+
+VECTOR("E:/CEG2136 Lab3/arithcircuit4bits.vwf")
+{
+	ZOOM{
+		ZBEGIN = 0;
+		ZEND = 1000000;
+		NUMERATOR = 1048;
+		DENOMINATOR = 1000000;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 10000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "A3";
+		INDEX = 0;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "A2";
+		INDEX = 1;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "A1";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "A0";
+		INDEX = 3;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "B3";
+		INDEX = 4;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "B2";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "B1";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "B0";
+		INDEX = 7;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "C3";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "C2";
+		INDEX = 9;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "C1";
+		INDEX = 10;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "C0";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "Carry_out";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "S2";
+		INDEX = 13;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "S1";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "S0";
+		INDEX = 15;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
+
+VECTOR("E:/CEG2136 Lab3/logic_1_bit_test.vwf")
+{
+	ZOOM{
+		ZBEGIN = 0;
+		ZEND = 1000000;
+		NUMERATOR = 1032;
+		DENOMINATOR = 1000000;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 10000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "Ai";
+		INDEX = 0;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "AiNext";
+		INDEX = 1;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "AiPrevious";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "Bi";
+		INDEX = 3;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "Ci";
+		INDEX = 4;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "S2";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "S1";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "S0";
+		INDEX = 7;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
+
+VECTOR("E:/CEG2136 Lab3/logic_test.vwf")
+{
+	ZOOM{
+		ZBEGIN = 0;
+		ZEND = 10000000;
+		NUMERATOR = 1048;
+		DENOMINATOR = 10000000;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 10000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "A3";
+		INDEX = 0;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "A2";
+		INDEX = 1;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "A1";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "A0";
+		INDEX = 3;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "B3";
+		INDEX = 4;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "B2";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "B1";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "B0";
+		INDEX = 7;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "C3";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "C2";
+		INDEX = 9;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "C1";
+		INDEX = 10;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "C0";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "S2";
+		INDEX = 12;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "S1";
+		INDEX = 13;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "S0";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
+
 VECTOR("E:/CEG2136 Lab3/lab3top.vwf")
 {
 	ZOOM{
@@ -38,15 +733,15 @@ VECTOR("E:/CEG2136 Lab3/lab3top.vwf")
 		INTERVAL_TYPE = HALF_GRID;
 	}
 	LINE{
-		SIGNAL = "A3";
+		SIGNAL = "A";
 		INDEX = 0;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "A2";
+		SIGNAL = "A3";
 		INDEX = 1;
 		FORMAT = E;
 		SCALE = 1;
@@ -54,7 +749,7 @@ VECTOR("E:/CEG2136 Lab3/lab3top.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "A1";
+		SIGNAL = "A2";
 		INDEX = 2;
 		FORMAT = E;
 		SCALE = 1;
@@ -62,7 +757,7 @@ VECTOR("E:/CEG2136 Lab3/lab3top.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "A0";
+		SIGNAL = "A1";
 		INDEX = 3;
 		FORMAT = E;
 		SCALE = 1;
@@ -70,7 +765,7 @@ VECTOR("E:/CEG2136 Lab3/lab3top.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "B3";
+		SIGNAL = "A0";
 		INDEX = 4;
 		FORMAT = E;
 		SCALE = 1;
@@ -78,15 +773,15 @@ VECTOR("E:/CEG2136 Lab3/lab3top.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "B2";
+		SIGNAL = "B";
 		INDEX = 5;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "B1";
+		SIGNAL = "B3";
 		INDEX = 6;
 		FORMAT = E;
 		SCALE = 1;
@@ -94,7 +789,7 @@ VECTOR("E:/CEG2136 Lab3/lab3top.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "B0";
+		SIGNAL = "B2";
 		INDEX = 7;
 		FORMAT = E;
 		SCALE = 1;
@@ -102,7 +797,7 @@ VECTOR("E:/CEG2136 Lab3/lab3top.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "C3";
+		SIGNAL = "B1";
 		INDEX = 8;
 		FORMAT = E;
 		SCALE = 1;
@@ -110,7 +805,7 @@ VECTOR("E:/CEG2136 Lab3/lab3top.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "C2";
+		SIGNAL = "B0";
 		INDEX = 9;
 		FORMAT = E;
 		SCALE = 1;
@@ -118,15 +813,15 @@ VECTOR("E:/CEG2136 Lab3/lab3top.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "C1";
+		SIGNAL = "C";
 		INDEX = 10;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "C0";
+		SIGNAL = "C3";
 		INDEX = 11;
 		FORMAT = E;
 		SCALE = 1;
@@ -134,7 +829,7 @@ VECTOR("E:/CEG2136 Lab3/lab3top.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "CLEAR";
+		SIGNAL = "C2";
 		INDEX = 12;
 		FORMAT = E;
 		SCALE = 1;
@@ -142,7 +837,7 @@ VECTOR("E:/CEG2136 Lab3/lab3top.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "CLOCK";
+		SIGNAL = "C1";
 		INDEX = 13;
 		FORMAT = E;
 		SCALE = 1;
@@ -150,7 +845,7 @@ VECTOR("E:/CEG2136 Lab3/lab3top.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Cy";
+		SIGNAL = "C0";
 		INDEX = 14;
 		FORMAT = E;
 		SCALE = 1;
@@ -158,7 +853,7 @@ VECTOR("E:/CEG2136 Lab3/lab3top.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "S";
+		SIGNAL = "CLEAR";
 		INDEX = 15;
 		FORMAT = E;
 		SCALE = 1;
@@ -166,7 +861,7 @@ VECTOR("E:/CEG2136 Lab3/lab3top.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "S3";
+		SIGNAL = "CLOCK";
 		INDEX = 16;
 		FORMAT = E;
 		SCALE = 1;
@@ -174,7 +869,7 @@ VECTOR("E:/CEG2136 Lab3/lab3top.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "S2";
+		SIGNAL = "Cy";
 		INDEX = 17;
 		FORMAT = E;
 		SCALE = 1;
@@ -182,7 +877,7 @@ VECTOR("E:/CEG2136 Lab3/lab3top.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "S1";
+		SIGNAL = "S";
 		INDEX = 18;
 		FORMAT = E;
 		SCALE = 1;
@@ -190,15 +885,15 @@ VECTOR("E:/CEG2136 Lab3/lab3top.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "S0";
+		SIGNAL = "Select";
 		INDEX = 19;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "V";
+		SIGNAL = "S3";
 		INDEX = 20;
 		FORMAT = E;
 		SCALE = 1;
@@ -206,8 +901,40 @@ VECTOR("E:/CEG2136 Lab3/lab3top.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Z";
+		SIGNAL = "S2";
 		INDEX = 21;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "S1";
+		INDEX = 22;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "S0";
+		INDEX = 23;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "V";
+		INDEX = 24;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "Z";
+		INDEX = 25;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -215,13 +942,13 @@ VECTOR("E:/CEG2136 Lab3/lab3top.vwf")
 	}
 }
 
-VECTOR("E:/CEG2136 Lab3/arithcircuit4bits.vwf")
+VECTOR("E:/CEG2136 Lab3/state4bits_test.vwf")
 {
 	ZOOM{
 		ZBEGIN = 0;
 		ZEND = 1000000;
-		NUMERATOR = 1043;
-		DENOMINATOR = 1000000;
+		NUMERATOR = 20;
+		DENOMINATOR = 1000;
 		TOP_INDEX = 0;
 	}
 	CLOCK{
@@ -233,7 +960,7 @@ VECTOR("E:/CEG2136 Lab3/arithcircuit4bits.vwf")
 		INTERVAL_TYPE = HALF_GRID;
 	}
 	LINE{
-		SIGNAL = "A3";
+		SIGNAL = "C3";
 		INDEX = 0;
 		FORMAT = E;
 		SCALE = 1;
@@ -241,7 +968,7 @@ VECTOR("E:/CEG2136 Lab3/arithcircuit4bits.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "A2";
+		SIGNAL = "C2";
 		INDEX = 1;
 		FORMAT = E;
 		SCALE = 1;
@@ -249,7 +976,7 @@ VECTOR("E:/CEG2136 Lab3/arithcircuit4bits.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "A1";
+		SIGNAL = "C1";
 		INDEX = 2;
 		FORMAT = E;
 		SCALE = 1;
@@ -257,7 +984,7 @@ VECTOR("E:/CEG2136 Lab3/arithcircuit4bits.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "A0";
+		SIGNAL = "C0";
 		INDEX = 3;
 		FORMAT = E;
 		SCALE = 1;
@@ -265,7 +992,7 @@ VECTOR("E:/CEG2136 Lab3/arithcircuit4bits.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "B3";
+		SIGNAL = "Carry_in";
 		INDEX = 4;
 		FORMAT = E;
 		SCALE = 1;
@@ -273,7 +1000,7 @@ VECTOR("E:/CEG2136 Lab3/arithcircuit4bits.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "B2";
+		SIGNAL = "Cy";
 		INDEX = 5;
 		FORMAT = E;
 		SCALE = 1;
@@ -281,7 +1008,7 @@ VECTOR("E:/CEG2136 Lab3/arithcircuit4bits.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "B1";
+		SIGNAL = "S";
 		INDEX = 6;
 		FORMAT = E;
 		SCALE = 1;
@@ -289,7 +1016,7 @@ VECTOR("E:/CEG2136 Lab3/arithcircuit4bits.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "B0";
+		SIGNAL = "S3";
 		INDEX = 7;
 		FORMAT = E;
 		SCALE = 1;
@@ -297,7 +1024,7 @@ VECTOR("E:/CEG2136 Lab3/arithcircuit4bits.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "C3";
+		SIGNAL = "V";
 		INDEX = 8;
 		FORMAT = E;
 		SCALE = 1;
@@ -305,56 +1032,8 @@ VECTOR("E:/CEG2136 Lab3/arithcircuit4bits.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "C2";
+		SIGNAL = "Z";
 		INDEX = 9;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "C1";
-		INDEX = 10;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "C0";
-		INDEX = 11;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "Carry_out";
-		INDEX = 12;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "S2";
-		INDEX = 13;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "S1";
-		INDEX = 14;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "S0";
-		INDEX = 15;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -366,10 +1045,10 @@ VECTOR("E:/CEG2136 Lab3/db/Lab3.sim.cvwf")
 {
 	ZOOM{
 		ZBEGIN = 0;
-		ZEND = 1000000;
-		NUMERATOR = 994;
-		DENOMINATOR = 1000000;
-		TOP_INDEX = 3;
+		ZEND = 984761;
+		NUMERATOR = 1050;
+		DENOMINATOR = 984761;
+		TOP_INDEX = 0;
 	}
 	CLOCK{
 		PERIOD = 10000;
@@ -380,15 +1059,15 @@ VECTOR("E:/CEG2136 Lab3/db/Lab3.sim.cvwf")
 		INTERVAL_TYPE = HALF_GRID;
 	}
 	LINE{
-		SIGNAL = "A3";
+		SIGNAL = "A";
 		INDEX = 0;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "A2";
+		SIGNAL = "A3";
 		INDEX = 1;
 		FORMAT = E;
 		SCALE = 1;
@@ -396,7 +1075,7 @@ VECTOR("E:/CEG2136 Lab3/db/Lab3.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "A1";
+		SIGNAL = "A2";
 		INDEX = 2;
 		FORMAT = E;
 		SCALE = 1;
@@ -404,7 +1083,7 @@ VECTOR("E:/CEG2136 Lab3/db/Lab3.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "A0";
+		SIGNAL = "A1";
 		INDEX = 3;
 		FORMAT = E;
 		SCALE = 1;
@@ -412,7 +1091,7 @@ VECTOR("E:/CEG2136 Lab3/db/Lab3.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "B3";
+		SIGNAL = "A0";
 		INDEX = 4;
 		FORMAT = E;
 		SCALE = 1;
@@ -420,15 +1099,15 @@ VECTOR("E:/CEG2136 Lab3/db/Lab3.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "B2";
+		SIGNAL = "B";
 		INDEX = 5;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "B1";
+		SIGNAL = "B3";
 		INDEX = 6;
 		FORMAT = E;
 		SCALE = 1;
@@ -436,7 +1115,7 @@ VECTOR("E:/CEG2136 Lab3/db/Lab3.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "B0";
+		SIGNAL = "B2";
 		INDEX = 7;
 		FORMAT = E;
 		SCALE = 1;
@@ -444,7 +1123,7 @@ VECTOR("E:/CEG2136 Lab3/db/Lab3.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "C3";
+		SIGNAL = "B1";
 		INDEX = 8;
 		FORMAT = E;
 		SCALE = 1;
@@ -452,7 +1131,7 @@ VECTOR("E:/CEG2136 Lab3/db/Lab3.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "C2";
+		SIGNAL = "B0";
 		INDEX = 9;
 		FORMAT = E;
 		SCALE = 1;
@@ -460,15 +1139,15 @@ VECTOR("E:/CEG2136 Lab3/db/Lab3.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "C1";
+		SIGNAL = "C";
 		INDEX = 10;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "C0";
+		SIGNAL = "C3";
 		INDEX = 11;
 		FORMAT = E;
 		SCALE = 1;
@@ -476,7 +1155,7 @@ VECTOR("E:/CEG2136 Lab3/db/Lab3.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Carry_out";
+		SIGNAL = "C2";
 		INDEX = 12;
 		FORMAT = E;
 		SCALE = 1;
@@ -484,7 +1163,7 @@ VECTOR("E:/CEG2136 Lab3/db/Lab3.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "S2";
+		SIGNAL = "C1";
 		INDEX = 13;
 		FORMAT = E;
 		SCALE = 1;
@@ -492,7 +1171,7 @@ VECTOR("E:/CEG2136 Lab3/db/Lab3.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "S1";
+		SIGNAL = "C0";
 		INDEX = 14;
 		FORMAT = E;
 		SCALE = 1;
@@ -500,8 +1179,88 @@ VECTOR("E:/CEG2136 Lab3/db/Lab3.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "S0";
+		SIGNAL = "CLEAR";
 		INDEX = 15;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "CLOCK";
+		INDEX = 16;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "Cy";
+		INDEX = 17;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "S";
+		INDEX = 18;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "Select";
+		INDEX = 19;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "S3";
+		INDEX = 20;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "S2";
+		INDEX = 21;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "S1";
+		INDEX = 22;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "S0";
+		INDEX = 23;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "V";
+		INDEX = 24;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "Z";
+		INDEX = 25;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
